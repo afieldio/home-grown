@@ -1,0 +1,39 @@
+{% load staticfiles %}
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+	<title>Aquaman</title>
+
+	<link rel="stylesheet" type="text/css" href="{% static "sensor/css/material.min.css"%}">
+	<link rel="stylesheet" type="text/css" href="{% static "sensor/css/style.css"%}">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+	{% block head %}
+	{% endblock %}
+	
+
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+
+
+	{% block content %}
+
+	{% endblock %}
+
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript">
+	</script>
+	<script type="text/javascript" src="{% static "sensor/js/material.min.js"%}"></script>
+</body>
+</html>
