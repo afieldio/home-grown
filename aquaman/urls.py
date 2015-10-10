@@ -20,5 +20,9 @@ urlpatterns = [
     
     url(r'^sensor/', include('sensor.urls', namespace="sensor")),
     url(r'^admin/', include(admin.site.urls)),
-    # url(r'', 'aquaman.views.index'),
+    url(r'^home/$', 'aquaman.views.index'),
+    url(r'^about/$', 'aquaman.views.about'),
+    url(r'^presentation/$', 'aquaman.views.presentation'),
+    url(r'^$', 'aquaman.views.index'),
+
 ]

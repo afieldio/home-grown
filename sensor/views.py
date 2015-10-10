@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import RequestContext, loader
 from .models import Sensor
+from .models import SensorData
 from .serializer import SensorSerializer
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
@@ -40,9 +41,19 @@ class DetailSensor(APIView):
 			raise Http404
 
 	def get(self, request, pk, format=None):
+		import pdb; pdb.set_trace()
+		
 		sensor = self.get_object(pk)
 		serializer = SensorSerializer(sensor)
 		return Response(serializer.data)
+
+	def create(self, validated_data):
+		import pdb; pdb.set_trace()
+		sensors_data = validated_data.pop('sensorData')
+		sensor = Sensor.objects.create(**validated_data)
+		for sensor_data in sensors_data:
+			SensorData.objects.create(sensor=sensor, **sensor_data)
+		return sensor
 
 	def put(self, request, pk, format=None):
 		sensor = self.get_object(pk)
@@ -60,8 +71,10 @@ class DetailSensor(APIView):
 
 
 def index(request):
-    recent_sensor_list = Sensor.objects.order_by('sub_date')
-    context = {'recent_sensor_list':recent_sensor_list}
+    latest_grow_temp = SensorData.objects.filter(sensor__sensor_name="GT").latest("sub_date")
+    latest_sump_temp = SensorData.objects.filter(sensor__sensor_name="ST").latest("sub_date")
+    latest_fish_temp = SensorData.objects.filter(sensor__sensor_name="FT").latest("sub_date")
+    context = {'latest_grow_temp':latest_grow_temp, 'latest_sump_temp':latest_sump_temp, 'latest_fish_temp':latest_fish_temp}
     return render(request, 'sensor/index.html', context)
 
 def detail(request, sensor_id):
