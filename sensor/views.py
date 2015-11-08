@@ -11,6 +11,12 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework import permissions
+from matplotlib import pylab
+from pylab import *
+
+import PIL
+import PIL.Image
+import StringIO
 
 # Create your views here.
 
@@ -82,4 +88,26 @@ def detail(request, sensor_id):
     except Sensor.DoesNotExist:
         raise Http404("Sensor does not Exist")
     return render(request, 'sensor/detail.html', {'sensor_detail':sensor_detail})
-    
+
+def graph(request, sn):
+	try:
+		sn = sn.upper()
+		x = Sensor.objects.filter(sensor_name=sn).values('sub_date')
+		y = Sensor.objects.filter(sensor_name=sn).values('data')
+		plot(x,y, linewidth=2)
+
+		buffer = StringIO.StringIO()
+		canvas = pylab.get_current_fig_manager().canvas
+		canvas.draw()
+		graphIMG = PIL.Image.fromstring("RGB", canvas.get_width_height(), canvas.tostring_rgb())
+		graphIMG.save(buffer, "PNG")
+		pylab.close()
+
+
+		# import ipdb; ipdb.set_trace()
+	except Sensor.DoesNotExist:
+		raise Http404("Sensor does not Exist")
+	return HttpResponse (buffer.getvalue(), content_type="Image/png")
+
+def graph_view(request):
+	return render(request, 'sensor/graph.html')

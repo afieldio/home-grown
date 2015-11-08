@@ -8,6 +8,8 @@ urlpatterns = [
     url(r'^sensorsapi/$', views.AllSensors.as_view()),
     url(r'^sensorsapi/(?P<pk>[0-9]+)/$', views.DetailSensor.as_view()),
     url(r'^$', views.index, name='index'),
+    url(r'^(?P<sn>[a-z]{2})/$', views.graph_view, name='graph'),
+    url(r'^graph.png$', views.graph),
 
 ]
 
