@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from sensor import views
 
 urlpatterns = [
     
     url(r'^sensor/', include('sensor.urls', namespace="sensor")),
+    url(r'^sensor/(?P<sn>[a-z]{2})/$', views.graph, name='graph'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^home/$', 'aquaman.views.index'),
     url(r'^about/$', 'aquaman.views.about'),

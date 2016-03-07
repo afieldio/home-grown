@@ -13,8 +13,13 @@
 
 
 
+
 {% block content %}
 <h1>Sensors</h1>
+
+
+
+
 <div class="mdl-grid">
 	{% if latest_grow_temp %}
 	<div class="mdl-cell mdl-cell--4-col temp-card mdl-card mdl-shadow--2dp">
@@ -23,7 +28,7 @@
 			<div id="grow_temp" class="current-temperature" data-temperature="{{latest_grow_temp.data}}" data-low="0" data-high="50" data-optimal-low="20" data-optimal-high="30"></div>
 		</div>
 		<div class="mdl-card__actions mdl-card--border">
-			<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="">
+			<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{% url 'graph' 'gt' %}">
 			More Info
 			</a>
 			<div class="mdl-layout-spacer"></div>
@@ -40,7 +45,7 @@
 			<div id="sump_temp" class="current-temperature" data-temperature="{{latest_sump_temp.data}}" data-low="0" data-high="50" data-optimal-low="20" data-optimal-high="30"></div>
 		</div>
 		<div class="mdl-card__actions mdl-card--border">
-			<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="">
+			<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{% url 'graph' 'st' %}">
 			More Info
 			</a>
 			<div class="mdl-layout-spacer"></div>
@@ -57,7 +62,7 @@
 			<div id="fish_temp" class="current-temperature" data-temperature="{{latest_fish_temp.data}}" data-low="0" data-high="50" data-optimal-low="20" data-optimal-high="30"></div>
 		</div>
 		<div class="mdl-card__actions mdl-card--border">
-			<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="">
+			<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{% url 'graph' 'ft' %}">
 			More Info
 			</a>
 			<div class="mdl-layout-spacer"></div>
@@ -68,5 +73,10 @@
 	{% endif %}
 
 	</div>
+	
+	
+	
+
+	
 	
 {% endblock %}

@@ -1,5 +1,42 @@
 {% extends 'base.html' %}
 
 {% block content %}
-	{{sensor_detail.sensor_name}}
+
+	<div id="graph"></div>
+
+	<script type="">
+		$(function () { 
+		    $('#graph').highcharts({
+		        chart: {
+		            type: 'line'
+		        },
+		        title: {
+		            text: '{{sensor_name}} Graph'
+		        },
+
+		        xAxis: {
+		        	type:'datetime',
+		            categories: [
+		            	{% for f in all_sensor_data %}
+		            		Date.UTC({{f.sub_date|date:"Y, m-1 , d, H, i"}}),
+		            	{% endfor %}
+		            ]
+		        },
+		        yAxis: {
+		            title: {
+		                text: 'Temperature'
+		            }
+		        },
+		        series: [{
+		            name: '{{sensor_name}}',
+		            data: [
+		            {% for f in all_sensor_data %}
+						{{f.data}},
+					{% endfor %}
+
+		            ]
+		        }]
+		    });
+		});
+	</script>
 {% endblock %}
