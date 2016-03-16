@@ -5,38 +5,61 @@
 	<div id="graph"></div>
 
 	<script type="">
-		$(function () { 
-		    $('#graph').highcharts({
-		        chart: {
-		            type: 'line'
-		        },
-		        title: {
-		            text: '{{sensor_name}} Graph'
-		        },
+		$(function () {
+			
+			var url = window.location.pathname.split( '/' )
+			var sensor = url[2];
 
-		        xAxis: {
-		        	type:'datetime',
-		            categories: [
-		            	{% for f in all_sensor_data %}
-		            		Date.UTC({{f.sub_date|date:"Y, m-1 , d, H, i"}}),
-		            	{% endfor %}
-		            ]
-		        },
-		        yAxis: {
-		            title: {
-		                text: 'Temperature'
-		            }
-		        },
-		        series: [{
-		            name: '{{sensor_name}}',
-		            data: [
-		            {% for f in all_sensor_data %}
-						{{f.data}},
-					{% endfor %}
-
-		            ]
-		        }]
+		    $.getJSON("/sensor/graph_data/"+sensor, function(data) {
+		    	var graph_data = JSON.parse(data);
+		    	var data = [];
+		    	for (var i = graph_data.length - 1; i >= 0; i--) {
+		    		var temp = graph_data[i]['data'];
+		    		var date = Date.parse(graph_data[i]['sub_date'])
+					data.push([date, temp]);
+		        };
+		        
+		    	$('#graph').highcharts({
+		    	
+				    chart: {
+				        type: 'line'
+				    },
+				    
+				    title: {
+				        text: 'Temperature'
+				    },
+				
+				    xAxis: {
+				    	title: {
+				    		text: 'Time'
+				    	},
+				        type: 'datetime'
+				    },
+				    
+				    yAxis: {
+				        title: {
+				            text: 'Temp °C'
+				        }
+				    },
+				
+				    tooltip: {
+				        crosshairs: true,
+				        shared: true,
+				        valueSuffix: '°C'
+				    },
+				    
+				    legend: {
+				        enabled: true
+				    },
+				
+				    series: [{
+				        name: 'Temperature',
+				        data: data
+				    }]
+				
+				});
 		    });
+		    
 		});
 	</script>
 {% endblock %}

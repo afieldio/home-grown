@@ -17,6 +17,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from sensor import views
 
+
 urlpatterns = [
     
     url(r'^sensor/', include('sensor.urls', namespace="sensor")),
@@ -26,5 +27,6 @@ urlpatterns = [
     url(r'^about/$', 'aquaman.views.about'),
     url(r'^presentation/$', 'aquaman.views.presentation'),
     url(r'^$', 'aquaman.views.index'),
+    
 
 ]

@@ -13,6 +13,8 @@ from rest_framework import status
 from rest_framework import permissions
 
 import json
+from django.core.serializers.json import DjangoJSONEncoder
+from django.http import JsonResponse
 
 # Create your views here.
 
@@ -105,8 +107,15 @@ def graph(request, sn):
         sensor_name = 'UNKNOWN'
 
     sn = sn.upper()
-    all_sensor_data = Sensor.objects.filter(sensor_name=sn).order_by("sub_date")
+    q = Sensor.objects.filter(sensor_name=sn).order_by("sub_date").values('data','sub_date')
+    all_sensor_data = json.dumps(list(q), cls=DjangoJSONEncoder)
 
     context = {'all_sensor_data': all_sensor_data, 'sensor_name': sensor_name}
 
     return render(request, 'sensor/detail.html', context)
+
+def graph_data(request, sn):
+    sn = sn.upper()
+    q = Sensor.objects.filter(sensor_name=sn).order_by("sub_date").values('data','sub_date')
+    all_sensor_data = json.dumps(list(q), cls=DjangoJSONEncoder)
+    return JsonResponse(all_sensor_data, safe=False)

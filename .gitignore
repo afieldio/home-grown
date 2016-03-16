@@ -1,2 +1,3 @@
 *.pyc
 aquaman/settings.py
+*.sqlite3
