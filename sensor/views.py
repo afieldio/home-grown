@@ -74,17 +74,35 @@ class DetailSensor(APIView):
 
 
 def index(request):
-    latest_grow_temp = Sensor.objects.filter(
+    try:
+        latest_grow_temp = Sensor.objects.filter(
         sensor_name="GT").latest("sub_date")
+    except Exception, e:
+        latest_grow_temp="99.99"
+        raise e
+    
     latest_sump_temp = Sensor.objects.filter(
         sensor_name="ST").latest("sub_date")
     latest_fish_temp = Sensor.objects.filter(
         sensor_name="FT").latest("sub_date")
+    latest_air_temp = Sensor.objects.filter(sensor_name="AT").latest('sub_date')
+    latest_air_pressure = Sensor.objects.filter(sensor_name="AP").latest('sub_date')
+    latest_light_lux = Sensor.objects.filter(sensor_name="LS").order_by('sub_date').reverse()[:2]
+    light = False
+    
+    if latest_light_lux[0].data < 10 and latest_light_lux[1].data < 10:
+        light = False
+    else:
+        light = True
+
+    print light
+
+    # import ipdb; ipdb.set_trace()
     all_fish_temp = Sensor.objects.filter(sensor_name="FT").order_by('sub_date')
 
     # import ipdb; ipdb.set_trace()
     context = {'latest_grow_temp': latest_grow_temp, 'latest_sump_temp':
-               latest_sump_temp, 'latest_fish_temp': latest_fish_temp, 'all_fish_temp': all_fish_temp,}
+               latest_sump_temp, 'latest_fish_temp': latest_fish_temp, 'all_fish_temp': all_fish_temp, 'light':light, 'latest_light_lux':latest_light_lux}
     return render(request, 'sensor/index.html', context)
 
 
