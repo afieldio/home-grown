@@ -17,8 +17,6 @@
 {% block content %}
 <h1>Sensors</h1>
 
-<p>Light: {{light}}</p>
-
 
 
 
@@ -77,7 +75,7 @@
 	</div>
 
 
-	{% if latest_light_lux %}
+	
 	<div class="mdl-cell mdl-cell--4-col temp-card mdl-card mdl-shadow--2dp">
 		<div class="temp-title mdl-card__title mdl-card--expand">
 			<h4>Lights</h4>
@@ -109,9 +107,6 @@
 			<div class="mdl-layout-spacer"></div>
 		</div>
 	</div>
-	{% else %}
-		<h1>No Fish Data</h1>
-	{% endif %}
 
 	</div>
 	
