@@ -15,18 +15,29 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from sensor import views
+from django.conf.urls import url
+from rest_framework.urlpatterns import format_suffix_patterns
+from . import views
+from django.conf.urls import include
+
 
 
 urlpatterns = [
-    
-    url(r'^sensor/', include('sensor.urls', namespace="sensor")),
-    url(r'^sensor/(?P<sn>[a-z]{2})/$', views.graph, name='graph'),
+    url(r'^(?P<sn>[a-z]{2})/$', views.graph, name='graph'),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^home/$', 'aquaman.views.index'),
-    url(r'^about/$', 'aquaman.views.about'),
-    url(r'^presentation/$', 'aquaman.views.presentation'),
+    url(r'^home/$', 'aquaman.views.index', name='home' ),
+    url(r'^about/$', 'aquaman.views.about', name='about'),
+    url(r'^presentation/$', 'aquaman.views.presentation', name='presentation'),
+    url(r'^contact/$', 'aquaman.views.contact', name='contact'),
     url(r'^$', 'aquaman.views.index'),
-    
+    url(r'^sensorsapi/$', views.AllSensors.as_view()),
+    url(r'^sensorsapi/(?P<pk>[0-9]+)/$', views.DetailSensor.as_view()),
+    url(r'^(?P<sn>[a-z]{2})/$', views.graph, name='graph'),
+    url(r'^graph_data/(?P<sn>[a-z]{2})/$', views.graph_data, name='data'),
+]
 
+urlpatterns = format_suffix_patterns(urlpatterns)
+
+urlpatterns += [
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]

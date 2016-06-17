@@ -1,0 +1,1261 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Date",
+				"DateTimeField	class"
+			],
+			[
+				"ma",
+				"max_length"
+			],
+			[
+				"Man",
+				"ManyToManyField	class"
+			],
+			[
+				"Temp",
+				"Temperature"
+			],
+			[
+				"fon",
+				"font-family"
+			],
+			[
+				"sensor",
+				"sensor_list"
+			],
+			[
+				"cont",
+				"context"
+			],
+			[
+				"all",
+				"all_graphs"
+			],
+			[
+				"sen",
+				"sensor_list	statement"
+			],
+			[
+				"late",
+				"latest_light_lux	statement"
+			],
+			[
+				"lat",
+				"latest_light_lux	statement"
+			],
+			[
+				"latest",
+				"latest_light_lux	statement"
+			],
+			[
+				"lates",
+				"latest_grow_temp	statement"
+			],
+			[
+				"graph",
+				"graph_data"
+			],
+			[
+				"exc",
+				"Exception"
+			],
+			[
+				"grow",
+				"grow_temp"
+			],
+			[
+				"fish",
+				"fish_temp"
+			],
+			[
+				"sump",
+				"sump_temp"
+			],
+			[
+				"sum",
+				"sump_temp	statement"
+			],
+			[
+				"clas",
+				"className"
+			],
+			[
+				"cre",
+				"createElement"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"se",
+				"selectGreeting"
+			],
+			[
+				"greet",
+				"greeting"
+			],
+			[
+				"new",
+				"newLeft"
+			],
+			[
+				"en",
+				"environ	instance"
+			],
+			[
+				"En",
+				"environ	instance"
+			],
+			[
+				"inv",
+				"invitee"
+			],
+			[
+				"user",
+				"user_logged_in	instance"
+			],
+			[
+				"fo",
+				"form	Tag"
+			],
+			[
+				"Pas",
+				"ChangePasswordForm"
+			],
+			[
+				"con",
+				"context_object_name"
+			],
+			[
+				"as",
+				"as_view	function"
+			],
+			[
+				"De",
+				"DetailUser	class"
+			],
+			[
+				"boder",
+				"border-radius"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"bord",
+				"border-bottom"
+			],
+			[
+				"req",
+				"request_user_list"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"d",
+				"div	Tag"
+			],
+			[
+				"form",
+				"format	function"
+			],
+			[
+				"try",
+				"try	Try/Except"
+			],
+			[
+				"share",
+				"shareformset	statement"
+			],
+			[
+				"Share",
+				"ShareFormSet	statement"
+			],
+			[
+				"mode",
+				"model"
+			],
+			[
+				"sha",
+				"shareform"
+			],
+			[
+				"la",
+				"label"
+			],
+			[
+				"forms",
+				"formset	statement"
+			],
+			[
+				"acc",
+				"accept"
+			],
+			[
+				"from",
+				"from_user"
+			],
+			[
+				"Fri",
+				"FriendRequest	class"
+			],
+			[
+				"answer",
+				"answer"
+			],
+			[
+				"an",
+				"answer_text"
+			],
+			[
+				"Obj",
+				"objects"
+			],
+			[
+				"Ques",
+				"Question	class"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"Cre",
+				"CreateAnswersFormSet"
+			],
+			[
+				"for",
+				"formset	statement"
+			],
+			[
+				"Qu",
+				"QuestionForm	class"
+			],
+			[
+				"get_ob",
+				"get_object_or_404	function"
+			],
+			[
+				"ans",
+				"answer_form	statement"
+			],
+			[
+				"template",
+				"template_name"
+			],
+			[
+				"Crea",
+				"CreateView	class"
+			],
+			[
+				"Questio",
+				"Question"
+			],
+			[
+				"rejec",
+				"rejected_request	statement"
+			],
+			[
+				"reject",
+				"rejected_request"
+			],
+			[
+				"to",
+				"to_user"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"bo",
+				"box-shadow"
+			],
+			[
+				"borde",
+				"border-radius"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"padding-",
+				"padding-left"
+			],
+			[
+				"clen",
+				"cleaned_data"
+			],
+			[
+				"tr",
+				"try	Try/Except"
+			],
+			[
+				"ques",
+				"question"
+			],
+			[
+				"que",
+				"questions"
+			],
+			[
+				"Req",
+				"RequestContext"
+			],
+			[
+				"Quest",
+				"Question"
+			],
+			[
+				"eve",
+				"event"
+			],
+			[
+				"i",
+				"ipdb	ipdb_snippet"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"Que",
+				"Question"
+			],
+			[
+				"Question",
+				"QuestionForm"
+			],
+			[
+				"Answr",
+				"AnswerFormSet"
+			],
+			[
+				"qu",
+				"question"
+			],
+			[
+				"questions_",
+				"questions_add_answers"
+			],
+			[
+				"Q",
+				"Question"
+			],
+			[
+				"q",
+				"questions_add_answers"
+			],
+			[
+				"render",
+				"render_to_response"
+			],
+			[
+				"Create",
+				"CreateQuestion"
+			],
+			[
+				"F",
+				"False"
+			],
+			[
+				"mod",
+				"models"
+			],
+			[
+				"event",
+				"event"
+			],
+			[
+				"Re",
+				"RequestContext"
+			],
+			[
+				"Ans",
+				"Answer"
+			],
+			[
+				"Questi",
+				"QuestionForm"
+			],
+			[
+				"get_o",
+				"get_object_or_404"
+			],
+			[
+				"reques",
+				"requested_users"
+			],
+			[
+				"to_",
+				"to_user_id"
+			],
+			[
+				"pk",
+				"pk__in"
+			],
+			[
+				"fri",
+				"friend"
+			],
+			[
+				"Cu",
+				"CustomUser"
+			],
+			[
+				"Friend",
+				"FriendRequest"
+			],
+			[
+				"friend",
+				"friend_request"
+			],
+			[
+				"f",
+				"friends"
+			],
+			[
+				"MAn",
+				"ManyToManyField"
+			],
+			[
+				"Ab",
+				"AbstractBaseUSer"
+			],
+			[
+				"ev",
+				"event"
+			],
+			[
+				"Model",
+				"ModelForm"
+			],
+			[
+				"object",
+				"objects"
+			],
+			[
+				"ac",
+				"action	Attr"
+			],
+			[
+				"frin",
+				"friend_request"
+			],
+			[
+				"Fr",
+				"FriendRequest"
+			],
+			[
+				"fr",
+				"friend_request_id"
+			],
+			[
+				"GET",
+				"get_object_or_404"
+			],
+			[
+				"FRIEN",
+				"friend_request"
+			],
+			[
+				"frie",
+				"friend_request"
+			],
+			[
+				"Frien",
+				"FriendForm"
+			],
+			[
+				"w",
+				"widget"
+			],
+			[
+				"Fir",
+				"FriendRequest"
+			],
+			[
+				"friends",
+				"friends"
+			],
+			[
+				"rela",
+				"related_name"
+			],
+			[
+				"Frei",
+				"Friend"
+			],
+			[
+				"Frein",
+				"FriendshipRequest"
+			],
+			[
+				"cret",
+				"created"
+			],
+			[
+				"rejet",
+				"rejected"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/adamf/Development/fishfish/fishfish/fishfish/urls.py",
+			"settings":
+			{
+				"buffer_size": 817,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/adamf/Development/fishfish/fishfish/fishfish/views.py",
+			"settings":
+			{
+				"buffer_size": 330,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/adamf/Development/fishfish/fishfish/templates/base.html",
+			"settings":
+			{
+				"buffer_size": 271,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/adamf/Development/fishfish/fishfish/templates/index.html",
+			"settings":
+			{
+				"buffer_size": 111,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/adamf/Development/fishfish/fishfish/fishfish/models.py",
+			"settings":
+			{
+				"buffer_size": 917,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/adamf/.virtualenvs/ff/lib/python2.7/site-packages/neo4django/db/models/properties.py",
+			"settings":
+			{
+				"buffer_size": 27830,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/adamf/Development/fishfish/fishfish/fishfish/settings.py",
+			"settings":
+			{
+				"buffer_size": 3415,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 374.0,
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"sn",
+				"Snippet: html"
+			],
+			[
+				"insl",
+				"Package Control: Install Package"
+			],
+			[
+				"sf",
+				"SFTP: Browse Server…"
+			],
+			[
+				"sft",
+				"SFTP: Browse Server…"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 435.0
+	},
+	"console":
+	{
+		"height": 132.0,
+		"history":
+		[
+			"import urllib2,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')",
+			"python",
+			"cd ",
+			"ls",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/adamf/Development/fishfish",
+		"/Users/adamf/Development/fishfish/fishfish",
+		"/Users/adamf/Development/fishfish/fishfish/fishfish",
+		"/Users/adamf/Development/fishfish/fishfish/templates",
+		"/Users/adamf/.virtualenvs/ff/lib/python2.7/site-packages",
+		"/Users/adamf/.virtualenvs/ff/lib/python2.7/site-packages/neo4django",
+		"/Users/adamf/.virtualenvs/ff/lib/python2.7/site-packages/neo4django/db",
+		"/Users/adamf/.virtualenvs/ff/lib/python2.7/site-packages/neo4django/db/models"
+	],
+	"file_history":
+	[
+		"/Users/adamf/Development/aquaman/aquaman/aquaman/static/bower_components/foundation/bower.json",
+		"/Users/adamf/Development/aquaman/aquaman/scss/_main_settings.scss",
+		"/Users/adamf/Development/aquaman/aquaman/bower_components/foundation/js/foundation.js",
+		"/Users/adamf/Development/aquaman/aquaman/node_modules/scss/_main_settings.scss",
+		"/Users/adamf/Development/aquaman/aquaman/node_modules/scss/main.scss",
+		"/Users/adamf/Development/aquaman/aquaman/aquaman/admin.py",
+		"/Users/adamf/Development/aquaman/aquaman/sensor/admin.py",
+		"/Users/adamf/Development/aquaman/aquaman/sensor/static/sensor/css/style.css",
+		"/Users/adamf/Development/aquaman/aquaman/sensor/templates/sensor/all_graphs.html",
+		"/Users/adamf/Development/aquaman/aquaman/aquaman/templates/base.html",
+		"/Users/adamf/Development/aquaman/aquaman/aquaman/views.py",
+		"/Users/adamf/Development/aquaman/aquaman/aquaman/templates/index.html",
+		"/Users/adamf/Development/aquaman/aquaman/sensor/templates/sensor/detail.html",
+		"/Users/adamf/Development/aquaman/aquaman/aquaman/urls.py",
+		"/Users/adamf/Development/aquaman/aquaman/sensor/urls.py",
+		"/Users/adamf/Development/aquaman/aquaman/sensor/views.py",
+		"/Users/adamf/Development/aquaman/aquaman/aquaman/models.py",
+		"/Users/adamf/Development/aquaman/aquaman/aquaman/settings.py",
+		"/Users/adamf/Development/aquaman/aquaman/aquaman/serializer.py",
+		"/Users/adamf/Development/aquaman/aquaman/sensor/models.py",
+		"/Users/adamf/Development/aquaman/aquaman/sensor/templates/sensor/index.html",
+		"/Users/adamf/Development/afieldio/afieldio/portfolio/static/portfolio/js/main.js",
+		"/Users/adamf/Development/fishfish/templates/detail.html",
+		"/Users/adamf/Development/fishfish/fishfish/local_settings.py",
+		"/Users/adamf/Development/fishfish/templates/friends.html",
+		"/Users/adamf/.virtualenvs/fishfish/lib/python2.7/site-packages/allauth/account/adapter.py",
+		"/Users/adamf/Development/fishfish/templates/home.html",
+		"/Users/adamf/Development/fishfish/templates/profile.html",
+		"/Users/adamf/Development/fishfish/fishfish/urls.py",
+		"/Users/adamf/Development/fishfish/templates/event_nav.html",
+		"/Users/adamf/.virtualenvs/fishfish/lib/python2.7/site-packages/allauth/account/views.py",
+		"/Users/adamf/.virtualenvs/fishfish/lib/python2.7/site-packages/allauth/account/forms.py",
+		"/Users/adamf/Development/fishfish/events/views.py",
+		"/Users/adamf/Development/fishfish/templates/all_friends.html",
+		"/Users/adamf/Development/fishfish/templates/find_friends.html",
+		"/Users/adamf/Development/fishfish/templates/create.html",
+		"/Users/adamf/Development/fishfish/events/models.py",
+		"/Users/adamf/Development/fishfish/events/forms.py",
+		"/Users/adamf/Development/fishfish/events/admin.py",
+		"/Users/adamf/Development/fishfish/templates/questions.html",
+		"/Users/adamf/Development/fishfish/templates/base.html",
+		"/Users/adamf/Development/fishfish/templates/event_pills.html",
+		"/Users/adamf/Development/fishfish/templates/chat.html",
+		"/Users/adamf/Development/fishfish/templates/share.html",
+		"/Users/adamf/.virtualenvs/fishfish/lib/python2.7/site-packages/django/contrib/auth/models.py",
+		"/Users/adamf/.virtualenvs/fishfish/lib/python2.7/site-packages/traitlets/traitlets.py",
+		"/Users/adamf/Development/fishfish/templates/account/signup.html",
+		"/Users/adamf/Development/fishfish/fishfish/wsgi.py",
+		"/Users/adamf/Development/fishfish/templates/questions_add.html",
+		"/Users/adamf/.virtualenvs/fishfish/lib/python2.7/site-packages/django/forms/fields.py",
+		"/Users/adamf/.virtualenvs/fishfish/lib/python2.7/site-packages/django/forms/widgets.py",
+		"/Users/adamf/Development/demo/django-dynamic-formset/demo/templates/example/inline-formset-autocomplete.html",
+		"/Users/adamf/.virtualenvs/fishfish/lib/python2.7/site-packages/django/forms/models.py",
+		"/Users/adamf/Development/demo/django-dynamic-formset/demo/templates/example/formset-stacked.html",
+		"/Users/adamf/Development/fishfish/templates/update.html",
+		"/Users/adamf/Development/fishfish/templates/results.html",
+		"/Users/adamf/Development/fishfish/templates/events_confirm_delete.html",
+		"/Users/adamf/Development/fishfish/fishfish/settings.py",
+		"/Users/adamf/Development/fishfish/templates/socialaccount/snippets/provider_list.html",
+		"/Users/adamf/Development/fishfish/templates/account/login.html",
+		"/Users/adamf/.virtualenvs/fishfish/lib/python2.7/site-packages/allauth/exceptions.py",
+		"/Users/adamf/.virtualenvs/fishfish/lib/python2.7/site-packages/allauth/models.py",
+		"/Users/adamf/.virtualenvs/fishfish/lib/python2.7/site-packages/django/contrib/admindocs/templates/admin_doc/view_index.html",
+		"/Users/adamf/.virtualenvs/fishfish/lib/python2.7/site-packages/IPython/core/tests/daft_extension.py",
+		"/Users/adamf/Development/fishfish/db.sqlite3",
+		"/Users/adamf/.virtualenvs/fishfish/lib/python2.7/site-packages/pytz/zoneinfo/Mexico/BajaSur",
+		"/Users/adamf/.virtualenvs/fishfish/lib/python2.7/site-packages/pytz/zoneinfo/America/Buenos_Aires",
+		"/Users/adamf/.virtualenvs/fishfish/lib/python2.7/site-packages/allauth/socialaccount/fields.py",
+		"/Users/adamf/.virtualenvs/fishfish/lib/python2.7/site-packages/PIL/FliImagePlugin.py",
+		"/Users/adamf/Development/ff.sublime-project",
+		"/Users/adamf/Development/fishfish/templates/socialaccount/authentication_error.html",
+		"/Users/adamf/Development/fishfish/templates/account/verification_sent.html",
+		"/Users/adamf/Development/fishfish/templates/account/verified_email_required.html",
+		"/Users/adamf/Development/fishfish/templates/questions_add_answers.html",
+		"/Users/adamf/Development/fishfish/events/static/events/js/maps.js",
+		"/Users/adamf/Library/Application Support/Sublime Text 3/Packages/User/ipdb_snippet.sublime-snippet",
+		"/Users/adamf/Development/fishfish/events/migrations/0001_initial.py",
+		"/Users/adamf/Development/fishfish/events/migrations/0007_auto_20151231_1510.py",
+		"/Users/adamf/Development/fishfish/events/migrations/0010_auto_20160104_1503.py",
+		"/Users/adamf/Development/fishfish/events/migrations/0009_auto_20151231_1732.py",
+		"/Users/adamf/Development/fishfish/fishfish/admin.py",
+		"/Users/adamf/Development/fishfish/events/static/css/style.css",
+		"/Volumes/Mac/CodingStuff/HTML5/Voice/JS/voice.js",
+		"/Users/adamf/Development/ff/teams/receivers.py",
+		"/Users/adamf/Development/AM(SFTP)/templates/graphs.html",
+		"/Users/adamf/Development/AM(SFTP)/app.py",
+		"/Users/adamf/Development/AM(SFTP)/templates/base.html",
+		"/Users/adamf/Development/AM(SFTP)/sftp-config.json",
+		"/Users/adamf/Development/AM(SFTP)/templates/about.html",
+		"/Users/adamf/Development/AM(SFTP)/static/style.css",
+		"/var/folders/lq/sm_3cwkd4clfvd31yl705w940000gn/T/sublime-sftp-browse-1442837407/PiServer/home/pi/AM/oneWire.py",
+		"/var/folders/lq/sm_3cwkd4clfvd31yl705w940000gn/T/sublime-sftp-browse-1442837170/PiServer/home/pi/AM/models.py",
+		"/var/folders/lq/sm_3cwkd4clfvd31yl705w940000gn/T/sublime-sftp-browse-1442837957/PiServer/home/pi/AM/app.py",
+		"/var/folders/lq/sm_3cwkd4clfvd31yl705w940000gn/T/sublime-sftp-browse-1442858511/PiServer/home/pi/AM/blink.py",
+		"/var/folders/lq/sm_3cwkd4clfvd31yl705w940000gn/T/sublime-sftp-browse-1442859511/PiServer/home/pi/AM/database.py",
+		"/var/folders/lq/sm_3cwkd4clfvd31yl705w940000gn/T/sublime-sftp-browse-1442859481/PiServer/home/pi/AM/sensors.py",
+		"/var/folders/lq/sm_3cwkd4clfvd31yl705w940000gn/T/sublime-sftp-browse-1442838099/PiServer/home/pi/AM/migrations/versions/263042bd1004_.py",
+		"/var/folders/lq/sm_3cwkd4clfvd31yl705w940000gn/T/sublime-sftp-browse-1442838045/PiServer/home/pi/AM/migrations/versions/35b2c3ccbb17_.py",
+		"/Users/adamf/Development/potato-be-coding-task/tracker/settings.py",
+		"/Users/adamf/Development/potato-be-coding-task/tracker/site/context_processors.py",
+		"/Users/adamf/Downloads/potato-be-coding-task/README.md",
+		"/Users/adamf/Development/ocado.py",
+		"/Users/adamf/Development/Piers/static/img/Piers/BSSYM7.TTF",
+		"/var/folders/lq/sm_3cwkd4clfvd31yl705w940000gn/T/sublime-sftp-browse-1436875500/PiServer/home/pi/AM/app.py",
+		"/Users/adamf/Development/AM/pin_control.py",
+		"/Users/adamf/Development/AM/sensors.py",
+		"/Users/adamf/Development/AM/templates/base.html",
+		"/Users/adamf/Development/AM/templates/index.html",
+		"/Users/adamf/Development/AM/app.py",
+		"/Users/adamf/Development/AM/templates/graphs.html",
+		"/var/folders/lq/sm_3cwkd4clfvd31yl705w940000gn/T/sublime-sftp-browse-1436208435/PiServer/home/pi/AM/models.py",
+		"/var/folders/lq/sm_3cwkd4clfvd31yl705w940000gn/T/sublime-sftp-browse-1436208251/PiServer/home/pi/AM/data_grab.py",
+		"/var/folders/lq/sm_3cwkd4clfvd31yl705w940000gn/T/sublime-sftp-browse-1436208190/PiServer/home/pi/AM/app.py",
+		"/var/folders/lq/sm_3cwkd4clfvd31yl705w940000gn/T/sublime-sftp-browse-1436217232/PiServer/home/pi/AM/pin_control.py",
+		"/var/folders/lq/sm_3cwkd4clfvd31yl705w940000gn/T/sublime-sftp-browse-1436208131/PiServer/home/pi/AM/sensors.py",
+		"/Users/adamf/Development/Piers/static/css/scrolling-nav.css",
+		"/Users/adamf/Development/Piers/index.html",
+		"/Users/adamf/Development/Piers/static/css/piersCss.scss",
+		"/Users/adamf/Development/Piers/static/css/style.css",
+		"/var/folders/lq/sm_3cwkd4clfvd31yl705w940000gn/T/sublime-sftp-browse-1435258602/PiServer/home/pi/AM/templates/index.html",
+		"/var/folders/lq/sm_3cwkd4clfvd31yl705w940000gn/T/sublime-sftp-browse-1435262921/PiServer/home/pi/AM/migrations/versions/1bf9dc95f05d_.py",
+		"/var/folders/lq/sm_3cwkd4clfvd31yl705w940000gn/T/sublime-sftp-browse-1435253203/PiServer/home/pi/AM/models.py",
+		"/var/folders/lq/sm_3cwkd4clfvd31yl705w940000gn/T/sublime-sftp-browse-1435271899/PiServer/home/pi/AM/app.py",
+		"/var/folders/lq/sm_3cwkd4clfvd31yl705w940000gn/T/sublime-sftp-browse-1435264387/PiServer/home/pi/AM/forms.py",
+		"/var/folders/lq/sm_3cwkd4clfvd31yl705w940000gn/T/sublime-sftp-browse-1435255902/PiServer/home/pi/AM/sensors.py",
+		"/var/folders/lq/sm_3cwkd4clfvd31yl705w940000gn/T/sublime-sftp-browse-1435252959/PiServer/home/pi/AM/app.py",
+		"/var/folders/lq/sm_3cwkd4clfvd31yl705w940000gn/T/sublime-sftp-browse-1435253258/PiServer/home/pi/AM/app.db",
+		"/var/folders/lq/sm_3cwkd4clfvd31yl705w940000gn/T/sublime-sftp-browse-1435133433/PiServer/home/pi/AM/models.py"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 94.0,
+		"where_history":
+		[
+			"/Users/adamf/Development/fishfish/events",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"bower_components",
+			"h4",
+			"day",
+			"latest_light",
+			"el",
+			"div",
+			"str",
+			"first",
+			"myName",
+			"$o",
+			"friends",
+			"Ab",
+			"Abstract",
+			"detail",
+			"form",
+			"user_logged",
+			"share",
+			"RadioSelect",
+			"()\n",
+			"from_user",
+			"placeholder",
+			"login",
+			"delete",
+			"%}\n",
+			"ipdb",
+			"or",
+			"ipdb",
+			"reverse",
+			"254",
+			"255",
+			"$(function() {\n	        $('#myForm tbody tr').formset({\n	            prefix: '{{ formset.prefix }}'\n	        });\n	    })\n	</script>",
+			"User",
+			"redirect",
+			"FriendShipRequest",
+			"FriendshipRequest",
+			"}}\n",
+			"modelformset",
+			"modelform",
+			"modelformset_factory",
+			"reverse",
+			"Events",
+			"Description",
+			"center",
+			"--2dp",
+			"append",
+			"json",
+			"data",
+			"upload",
+			"CRISPY_TEMPLATE_PACK",
+			"crispy",
+			"hr",
+			"block",
+			"intro",
+			"contact",
+			"map",
+			"client-section",
+			"contact",
+			"services",
+			"h4",
+			"creative",
+			"h3",
+			"about_info",
+			"h2",
+			"contact",
+			"about",
+			"h2",
+			"services",
+			"previous",
+			"h3",
+			"perception",
+			"percep",
+			"hr",
+			"h2",
+			"hr",
+			"about_container",
+			"contact-sec",
+			"footer",
+			"about_con",
+			"header_title",
+			"hr",
+			"services",
+			"about",
+			"panel",
+			"services-section",
+			"8em",
+			";\n",
+			"hr",
+			"about",
+			"absolute",
+			"container",
+			"title_row",
+			"<input type=\"checkbox\" name=\"onoffswitch\" class=\"onoffswitch-checkbox\" id=\"myonoffswitch3\" checked>\n				    <label class=\"onoffswitch-label\" for=\"myonoffswitch3\">\n				        <span class=\"onoffswitch-inner\"></span>\n				        <span class=\"onoffswitch-switch\"></span>\n				    </label>\n				</div>",
+			"form",
+			"}",
+			"()",
+			"row",
+			"overview",
+			"img",
+			"AM",
+			"event_id",
+			"loading",
+			",)",
+			"assignments",
+			"resource"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Event",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/adamf/Development/fishfish/fishfish/fishfish/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 817,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								811,
+								811
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 291.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/adamf/Development/fishfish/fishfish/fishfish/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 330,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								296,
+								296
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/adamf/Development/fishfish/fishfish/templates/base.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 271,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								271,
+								271
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/adamf/Development/fishfish/fishfish/templates/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 111,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								111,
+								111
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/adamf/Development/fishfish/fishfish/fishfish/models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 917,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								131,
+								131
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/adamf/.virtualenvs/ff/lib/python2.7/site-packages/neo4django/db/models/properties.py",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 27830,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1945.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/adamf/Development/fishfish/fishfish/fishfish/settings.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3415,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1101,
+								1101
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 318.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 110.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 100.0
+	},
+	"project": "fishfish.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"views",
+				"fishfish/events/views.py"
+			],
+			[
+				"deta",
+				"fishfish/templates/detail.html"
+			],
+			[
+				"forms",
+				"fishfish/events/forms.py"
+			],
+			[
+				"base",
+				"fishfish/templates/base.html"
+			],
+			[
+				"form",
+				"events/forms.py"
+			],
+			[
+				"view",
+				"events/views.py"
+			],
+			[
+				"for",
+				"events/forms.py"
+			],
+			[
+				"",
+				"app.py"
+			],
+			[
+				"/",
+				"~/Library/Application Support/Sublime Text 3/Packages/User/sftp_servers/pi2"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 184.0,
+		"selected_items":
+		[
+		],
+		"width": 360.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 243.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
