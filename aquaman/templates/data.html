@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+
+{% block title %}
+	Data
+{% endblock %}
+
+{% block head %}
+  
+{% endblock %}
+
+{% block content %}
+{% include "nav.html" %} 
+
+<div class="section-content">
+  <div class="row">
+    <h2 class="columns">Home Grown Data</h2>
+  </div>
+  <div class="row">
+  <div class="large-6 columns">
+      <div class="row">
+        <p class="columns">We are living in a world of Big Data, well, this is <strong>Home Grown Data</strong>. The system automatically collects various data points throughout the day. This allows us to track trends so that we can make improvements.</p>
+      </div>
+  </div>
+
+  <div class="large-6 columns">
+    <img src="{% static 'assets/graph.jpg' %}">
+  </div>
+  </div>
+</div>
+
+<div class="section-quote">
+  <div class="row">
+      <p class="quote">I never guess. It is a capital mistake to theorize before one has data. Insensibly one begins to twist facts to suit theories, instead of theories to suit facts.</p>
+    <p class="text-center author">Sir Arthur Conan Doyle</p>
+  </div>
+</div>
+
+<div class="section-header">
+</div>
+
+  
+  <div class="row">
+    <h2 class="columns">Last data entry: {{latest_grow_temp.sub_date}}</h2>
+  </div>
+  <div class="row">
+      <div class="medium-4 columns">
+        <div class="card">
+          <div class="content">
+            <p class="title">Grow Temp</p>
+            <div id="grow_temp" class="current-temperature" data-temperature="{{latest_grow_temp.data}}" data-low="0" data-high="50" data-optimal-low="20" data-optimal-high="30">
+            </div>
+          </div>
+          <div class="action">
+            <a href="{% url 'graph' 'gt' %}">More Info</a>
+          </div>
+        </div>
+      </div>
+      <div class="medium-4 columns">
+          <div class="card">
+            <div class="content">
+                <p class="title">Sump Temp</p>
+                <div id="sump_temp" class="current-temperature" data-temperature="{{latest_sump_temp.data}}" data-low="0" data-high="50" data-optimal-low="20" data-optimal-high="30">
+                </div>
+            </div>
+            <div class="action">
+                <a class="" href="{% url 'graph' 'gt' %}">More Info</a>
+            </div>
+          </div>
+      </div>
+      <div class="medium-4 columns">
+        <div class="card">
+            <div class="content">
+                <p class="title">Fish Temp</p>
+                <div id="fish_temp" class="current-temperature" data-temperature="{{latest_fish_temp.data}}" data-low="0" data-high="50" data-optimal-low="20" data-optimal-high="30">
+                </div>
+            </div>
+            <div class="action">
+                <a class="" href="{% url 'graph' 'st' %}">More Info</a>
+            </div>
+        </div>
+      </div>
+  </div>
+
+  
+<div class="row">
+    <div class="medium-4 columns">
+        <div class="card">
+            <div class="content">
+                <span class="title">Lights</span>
+                <div>
+                    <i class="fi-lightbulb light"></i>
+                </div>
+            </div>
+            <div class="action">
+                <a class="" href="{% url 'graph' 'ls' %}">More Info</a>
+            </div>
+        </div>
+    </div>
+    <div class="medium-4 columns">
+        <div class="card">
+            <div class="content">
+                <span class="title">Air Pressure</span>
+                <div>
+                    <i class="fi-lightbulb light"></i>
+                </div>
+            </div>
+            <div class="action">
+                <a class="" href="{% url 'graph' 'ap' %}">More Info</a>
+            </div>
+        </div>
+    </div>
+    <div class="medium-4 columns">
+        <div class="card">
+            <div class="content">
+                <span class="title">Humidity</span>
+                <div>
+                    <i class="fi-lightbulb light"></i>
+                </div>
+            </div>
+            <div class="action">
+                <a class="" href="{% url 'graph' 'ah' %}">More Info</a>
+            </div>
+        </div>
+    </div>
+</div>
+  
+
+
+
+<script src="{% static 'js/temp.js' %}"type="text/javascript"></script>
+<script type="">
+    $(function() {
+        var light = '{{light}}';
+        console.log(light);
+        if(light=='True'){
+            $('.light').addClass('lightOn');
+        }else{
+            $('.light').removeClass('lightOn');
+        }
+    });
+</script>
+
+{% endblock %}

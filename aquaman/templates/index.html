@@ -3,217 +3,110 @@
 {% load staticfiles %}
 
 {% block title %}
-    Home
+	Home
 {% endblock %}
 
 {% block head %}
-    <!-- <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
-    <script src="{% static 'js/temp.js' %}"type="text/javascript"></script>
 {% endblock %}
 
 
 
 
 {% block content %}
-    <!-- <div class="section">
-        <img src="http://static6.techinsider.io/image/56290c41bd86ef18008c3ee8/the-future-of-agriculture-is-an-indoor-vertical-farm-half-the-size-of-a-wal-mart.jpg">
-        
-    </div> -->
-        <div class="hero">
-            <div class="small-12 columns hero-title">
-                <h1 class="text-center">Triple A</h1>
-                <p class="text-center">An Agricultural Revolution</p>
-            </div>
-        </div>
+<div class="hero">
+	<div class="small-12 columns hero-title">
+		<h1 class="text-center">Home Grown</h1>
+		<p class="text-center">An Agricultural Revolution</p>
+	</div>
+</div>
 
-        <div class="sticky">
-            <nav class="top-bar" data-topbar role="navigation">
-              <ul class="title-area">
-                <li class="name">
-                  <h1>Triple A: System OK!</h1>
-                </li>
-                 <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-                <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-              </ul>
+{% include "nav.html" %} 
 
-              <section class="top-bar-section">
-                <!-- Right Nav Section -->
-                <ul class="right">
-                  <li class="active"><a href="#">Data</a></li>
-                  <li class="active"><a href="#">About</a></li>
-                  <li class="active"><a href="#">Contact</a></li>
-                </ul>
+<div class="section-content">
 
-                <!-- Left Nav Section -->
-               <!--  <ul class="left">
-                  <li><a href="#">Shed Status: All Good!</a></li>
-                </ul> -->
-              </section>
-            </nav>
-        </div>
+	<div class="row">
+		<h2 class="columns">What is Home Grown?</h2>
+	</div>
+	<div class="row">
+		<p class="columns"><strong>Home Grown</strong> is a closed loop Aquaponic System that allows people to grow healthy, nutricious food in an urban environment. It combines modern IoT technologies with century old farming techniques to create a miniture farm without the need for a garden.</p>
 
-        <div class="section-header">
-            <h2 class="text-center">What is Triple A?</h2>
-        </div>
+		<p class="columns">The video below shows a <em>small</em> scale prototype built in my Garden. The aim of this project was to prove that this was technicaly feasible. Some good news - it is! Please get in <a href="{% url 'contact' %}">touch</a> if you want to come visit!</p>
 
-        <div class="section-content">
-            <div class="row">
-                <p class="columns"><strong>Triple A</strong> is a food production system that allows people to grow healthy, nutricious food in an urban environment without the need for a garden. It combines modern IoT technologies with century old farming techniques to create a self contained</p>
+		<iframe class="column" width="100%" height="540px" src="https://www.youtube.com/embed/B8XeFcnTWAQ" frameborder="0" allowfullscreen></iframe>
+	</div>
+</div>
 
-                <p class="columns">Currently in the prototype phase it was first conceived by <a href="http://afield.io">Adam Field</a> whilst studying for a degree in Web Development. He has since developed his idea further and is now housed in a shed in his Garden</p>
+<div class="section-quote">
+	<div class="row">
+		<div class="columns large-3">
+			<img class="img-circle" src="{% static 'assets/norbert.png'%}">
+		</div>
+		<div class="columns large-9">
+			<p class="quote">The more we get out of the world the less we leave, and in the long run we shall have to pay our debts at a time that may be very inconvenient for our own survival.</p>
+			<p class="text-center author">Norbert Weiner</p>
+		</div>
+	</div>
+</div>
 
-                <iframe class="column" width="100%" height="400px" src="https://www.youtube.com/embed/B8XeFcnTWAQ" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
+<div class="section-content">
+	<div class="row">
+		<h2 class="columns">What is Aquaponics?</h2>
+	</div>
+	<div class="row">
+		<p class="columns"><strong>Aquaponics</strong> is a combination of Aquaculture and Hydroponics. Aquaculture is the farming of aquatic organisms and Hydroponics is the growing of plants using mineral nutrient solutions</p>
+		
+		<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2 aquaponic-info">
+			<li class="text-center">
+				<a href="https://en.wikipedia.org/wiki/Aquaculture" target="_blank">
+					<div class="aquaponic-images">
+						<img src="{% static 'assets/fish.png' %}">
+						<h3>Aquaculture</h3>
+						<p>More on Wikipedia</p>
+					</div>
+				</a>
+			</li>
+			<li class="text-center">
+				<a href="https://en.wikipedia.org/wiki/Hydroponics" target="_blank">
+					<div class="aquaponic-images">
+						<img src="{% static 'assets/plant.png' %}">
+						<h3>Hydroponics</h3>
+						<p>More on Wikipedia</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
 
-        
-        
+<div class="section-header">
+	<h2 class="text-center">How does Aquaponics work?</h2>
+</div>
 
-         <div class="section-header">
-            <h2 class="text-center">What is Aquaponics?</h2>
-        </div>
-
-        <div class="section-content">
-            <div class="row">
-                <p class="columns"><strong>Aquaponics</strong> is a combination of Aquaculture and Hydroponics. Combining these creates a closed loop system where the waste from the fish provides the nurtrients for the plants and in turn purifies the water for the fish.</p>
-                
-                <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2 aquaponic-info">
-                    <li class="text-center">
-                        <div class="aquaponic-images">
-                            <img src="{% static 'assets/fish.png' %}">
-                            <h3>Aquaculture</h3>
-                        </div>
-                    </li>
-                    
-                    <li class="text-center">
-                        <div class="aquaponic-images">
-                            <img src="{% static 'assets/plant.png' %}">
-                            <h3>Hydroponics</h3>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- <div class="row">
-            <ul class="large-block-grid-3 small-block-grid-1 block-centred columns grid-images">
-                <li class="text-center"><img src="http://lorempixel.com/300/400/"></li>
-                <li class="text-center"><img src="http://lorempixel.com/300/400/"></li>
-                <li class="text-center"><img src="http://lorempixel.com/300/400/"></li>
-            </ul>
-        </div> -->
-        
-        
-        
-        
-      
-
-    <div class="row">
-      <div class="small-12 columns">
-        <h1 class="text-center">Shed Data</h1>
-        <p>Data last collected at: {{latest_grow_temp.time}}</p>
-      </div>
-    </div>
-
-  <!-- <div class="row">
-      <div class="medium-4 columns">
-        <div class="card">
-          <div class="content">
-            <span class="title">Grow Temp</span>
-            <div id="grow_temp" class="current-temperature" data-temperature="{{latest_grow_temp.data}}" data-low="0" data-high="50" data-optimal-low="20" data-optimal-high="30">
-            </div>
-          </div>
-          <div class="action">
-            <a href="{% url 'graph' 'gt' %}">More Info</a>
-          </div>
-        </div>
-      </div>
-      <div class="medium-4 columns">
-          <div class="card">
-            <div class="content">
-                <span class="title">Sump Temp</span>
-                <div id="sump_temp" class="current-temperature" data-temperature="{{latest_sump_temp.data}}" data-low="0" data-high="50" data-optimal-low="20" data-optimal-high="30">
-                </div>
-            </div>
-            <div class="action">
-                <a class="" href="{% url 'graph' 'gt' %}">More Info</a>
-            </div>
-          </div>
-      </div>
-      <div class="medium-4 columns">
-        <div class="card">
-            <div class="content">
-                <span class="title">Fish Temp</span>
-                <div id="fish_temp" class="current-temperature" data-temperature="{{latest_fish_temp.data}}" data-low="0" data-high="50" data-optimal-low="20" data-optimal-high="30">
-                </div>
-            </div>
-            <div class="action">
-                <a class="" href="{% url 'graph' 'st' %}">More Info</a>
-            </div>
-        </div>
-      </div>
-  </div>
-
-  
-<div class="row">
-    <div class="medium-4 columns">
-        <div class="card">
-            <div class="content">
-                <span class="title">Lights</span>
-                <div>
-                    <i class="fi-lightbulb light"></i>
-                </div>
-            </div>
-            <div class="action">
-                <a class="" href="{% url 'graph' 'ls' %}">More Info</a>
-            </div>
-        </div>
-    </div>
-    <div class="medium-4 columns">
-        <div class="card">
-            <div class="content">
-                <span class="title">Air Pressure</span>
-                <div>
-                    <i class="fi-lightbulb light"></i>
-                </div>
-            </div>
-            <div class="action">
-                <a class="" href="{% url 'graph' 'ap' %}">More Info</a>
-            </div>
-        </div>
-    </div>
-    <div class="medium-4 columns">
-        <div class="card">
-            <div class="content">
-                <span class="title">Humidity</span>
-                <div>
-                    <i class="fi-lightbulb light"></i>
-                </div>
-            </div>
-            <div class="action">
-                <a class="" href="{% url 'graph' 'ah' %}">More Info</a>
-            </div>
-        </div>
-    </div>
-</div> -->
-  
-
-
-
-
-<script type="">
-    $(function() {
-        var light = '{{light}}';
-        console.log(light);
-        if(light=='True'){
-            $('.light').addClass('lightOn');
-        }else{
-            $('.light').removeClass('lightOn');
-        }
-    });
-</script>
-
-
-
+<div class="section-content">
+	<div class="row">
+		<div class="columns">
+			<p>Remember Biology GCSE's? Well the process at work is the Nitrogen cycle. It's really quite a simple process but one that has had millenia to be perfected. The joy of Aquaponics is the ability to harness this pefection!
+				
+			</p>
+		</div>
+		
+	</div>
+	<div class="row">
+		<div class="columns large-4">
+			<ol>
+				<li>The fish create waste from feeding</li>
+				<li>The waste is essentially ammonia</li>
+				<li>Bacteria convert the ammonia into nitrates and nitrites</li>
+				<li>The plants absorb the nitrates out of the system</li>
+				<li>The plants clean the water for the fish</li>
+			</ol>
+		</div>
+		<div class="columns large-6">
+			<h3 class="text-center">Nitrogen Cycle</h3>
+			<img class="text-center" src="{% static 'assets/nitrogen_a.png' %}">
+		</div>
+	</div>
+	
+</div>
 
 {% endblock %}

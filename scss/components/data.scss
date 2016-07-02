@@ -1,0 +1,26 @@
+.current-temperature{
+	width:100%;
+}
+
+.section-quote{
+	background: #fcfcfc;
+	padding: 50px 0px;
+
+	p{
+		font-weight: 100;
+		font-style: italic;
+	}
+
+	.quote{
+		width: 100%;
+		text-align: center;
+		margin: 0px auto;
+		font-size: 1.8rem;
+	}
+
+	.author{
+		font-size: 1.3rem;
+		padding-top: 30px;
+	}
+
+}

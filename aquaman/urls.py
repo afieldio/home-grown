@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^about/$', 'aquaman.views.about', name='about'),
     url(r'^presentation/$', 'aquaman.views.presentation', name='presentation'),
     url(r'^contact/$', 'aquaman.views.contact', name='contact'),
+    url(r'^data/$', 'aquaman.views.data', name='data'),
     url(r'^$', 'aquaman.views.index'),
     url(r'^sensorsapi/$', views.AllSensors.as_view()),
     url(r'^sensorsapi/(?P<pk>[0-9]+)/$', views.DetailSensor.as_view()),

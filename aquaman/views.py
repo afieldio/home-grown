@@ -26,6 +26,11 @@ from django.http import JsonResponse
 
 
 def index(request):
+    context = {'state':'home'}
+    
+    return render(request, 'index.html', context)
+
+def data(request):
     try:
         latest_grow_temp = Sensor.objects.filter(
             sensor_name="GT").latest("sub_date")
@@ -58,9 +63,9 @@ def index(request):
 
     # import ipdb; ipdb.set_trace()
     context = {'latest_grow_temp': latest_grow_temp, 'latest_sump_temp':
-               latest_sump_temp, 'latest_fish_temp': latest_fish_temp, 'all_fish_temp': all_fish_temp, 'light': light, 'latest_light_lux': latest_light_lux, 'state': 'home' }
-    return render(request, 'index.html', context)
+               latest_sump_temp, 'latest_fish_temp': latest_fish_temp, 'all_fish_temp': all_fish_temp, 'light': light, 'latest_light_lux': latest_light_lux, 'state': 'data' }
 
+    return render(request, 'data.html', context)
 
 def graph(request, sn):
     if sn == 'ft':
@@ -80,7 +85,7 @@ def graph(request, sn):
     all_sensor_data = json.dumps(list(q), cls=DjangoJSONEncoder)
 
     context = {'all_sensor_data': all_sensor_data,
-               'sensor_name': sensor_name, 'sensor_list': sensor_list, 'state': 'home'}
+               'sensor_name': sensor_name, 'sensor_list': sensor_list, 'state': 'data'}
 
     return render(request, 'detail.html', context)
 

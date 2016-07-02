@@ -1,8 +1,21 @@
-<nav class="nav">
-	<ul>
-		<li><a href="">Home</a></li>
-		<li><a href="">About</a></li>
-		<li><a href="">Presentation</a></li>
-		<li><a href="">Contact</a></li>
-	</ul>
-</nav>
+<div class="sticky">
+	<nav class="top-bar" data-topbar role="navigation">
+		<ul class="title-area">
+			<li class="name">
+				<h1>Triple A: System OK!</h1>
+			</li>
+			 <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+			<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+		</ul>
+
+		<section class="top-bar-section">
+			<!-- Right Nav Section -->
+			<ul class="right">
+				<li {% if state == "home" %} class="active" {% endif %}><a href="{% url 'home' %}">Home</a></li>
+				<li {% if state == "data" %} class="active" {% endif %}><a href="{% url 'data' %}">Data</a></li>
+				<li {% if state == "presentation" %} class="active" {% endif %}><a href="{% url 'presentation' %}">Presentation</a></li>
+				<li {% if state == "contact" %} class="active" {% endif %}><a href="{% url 'contact' %}">Contact</a></li>
+			</ul>
+		</section>
+	</nav>
+</div>
