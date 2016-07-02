@@ -1,0 +1,26 @@
+{
+  "name": "aquaman",
+  "homepage": "http://crox.io",
+  "authors": [
+    "afieldio <a.field738@gmail.com>"
+  ],
+  "description": "home grown aquaponics",
+  "main": "",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "^5.5.3",
+    "what-input": "~2.0.0",
+    "components-font-awesome": "^4.5.0"
+  }
+}
