@@ -1,5 +1,5 @@
 *.pyc
 aquaman/settings.py
 *.sqlite3
-aquaman/bower_components
-aquaman/node_modules
+bower_components
+node_modules
