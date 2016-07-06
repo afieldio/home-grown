@@ -7,28 +7,38 @@
 {% block content %}
 	
 {% include 'nav.html' %}
+<div class="section-content">
+	<div class="row">
+		<div class="columns">
+			<h2>Contact Us</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="columns">
+			<p>We just love to talk about Aquaponics - please get in touch if you want to know more!</p>
+		</div>
+	</div>
+	<div class="row">
+		<div id="contactForm" class="small-6 columns">
+			<form id="myForm" method="post" data-abide="">  
+				{% csrf_token %}
+				<label for="{{form.name_id}}">Name</label>
+				<small class="error">A name is required.</small>
+				<input type="text" placeholder="Your Name" required="">
 
-<h2>Contact Us</h2>
+				<label for="{{form.email_id}}">Email</label>
+				<small class="error">An email address is required.</small>
 
-<div class="row">
-	<div id="contactForm" class="small-12 small-offset-0 medium-8 medium-offset-2 large-8 large-offset-2 columns">
-		<form id="myForm" method="post" data-abide="">  
-			{% csrf_token %}
-			<label for="{{form.name_id}}">Name</label>
-			<small class="error">{{form.name.errors}}</small>
-			<input type="text" placeholder="Your Name" required="">
+				<input type="email" placeholder="username@address.com" required="">
 
-			<label for="{{form.email_id}}">Email</label>
-			<small class="error">An email address is required.</small>
+				<label>Your Message</label>
+				<small class="error">Your message is required.</small>
+				<textarea placeholder="Enter your message here" required=""></textarea>
 
-			<input type="email" placeholder="username@address.com" required="">
-
-			<label>Your Message</label>
-			<small class="error">Your message is required.</small>
-			<textarea placeholder="Enter your message here" required=""></textarea>
-
-			<input type="submit" class="nice blue radius button" value="Send Message">
-		</form>
+				<input type="submit" class="nice blue radius button" value="Send Message">
+			</form>
+		</div>
 	</div>
 </div>
+
 {% endblock %}

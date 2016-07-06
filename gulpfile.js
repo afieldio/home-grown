@@ -33,12 +33,12 @@ gulp.task('sass', function() {
 
 
 
-gulp.task('js', function () {
-    if (!fs.existsSync('aquaman/static/foundation/')) {
-        gulp.src('bower_components/foundation/')
-            .pipe(symlink('aquaman/static/foundation/')) // Write to the destination folder
-    }
-});
+// gulp.task('js', function () {
+//     if (!fs.existsSync('aquaman/static/bower_components/')) {
+//         gulp.src('bower_components/*')
+//             .pipe(symlink('aquaman/static/bower_components/')) // Write to the destination folder
+//     }
+// });
 
 /* Move font files */
 gulp.task('fonts', function(){
@@ -56,4 +56,4 @@ gulp.task('watch', function() {
 
 });
 
-gulp.task('default', ['sass', 'fonts', 'watch', 'js']);
+gulp.task('default', ['sass', 'fonts', 'watch']);

@@ -19,116 +19,135 @@
     <h2 class="columns">Home Grown Data</h2>
   </div>
   <div class="row">
-  <div class="large-6 columns">
-      <div class="row">
-        <p class="columns">We are living in a world of Big Data, well, this is <strong>Home Grown Data</strong>. The system automatically collects various data points throughout the day. This allows us to track trends so that we can make improvements.</p>
-      </div>
+    <div class="large-6 columns">
+        <div class="row">
+          <p class="columns">We are living in a world of Big Data, well, this is <strong>Home Grown Data</strong>. The system automatically collects various data points throughout the day. This allows us to track trends so that we can make improvements.</p>
+        </div>
+    </div>
+    <div class="large-6 columns">
+      <img src="{% static 'assets/graph.jpg' %}">
+    </div>
+  </div>
+</div>
+
+<div class="section-content">
+  <div class="row">
+    <h2 class="columns">Last data entry: {{latest_grow_temp.sub_date}}</h2>
   </div>
 
-  <div class="large-6 columns">
-    <img src="{% static 'assets/graph.jpg' %}">
-  </div>
+  <div class="row">
+      <div class="medium-3 columns">
+        <div class="card">
+          <div class="content">
+            <p class="title">Grow Bed</p>
+            <!-- <div id="grow_temp" class="current-temperature" data-temperature="{{latest_grow_temp.data}}" data-low="0" data-high="50" data-optimal-low="20" data-optimal-high="30">
+            </div> -->
+            <h3 class="text-center">
+                {{latest_grow_temp.data}}&deg;C
+            </h3>
+          </div>
+          <div class="action">
+                <div class="row">
+                  <a class="" href="{% url 'graph' 'gt' %}">
+                    <span class="columns small-3">Graph</span>
+                    <i class="fi-arrow-right columns small-3" aria-hidden="true"></i>
+                  </a>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="medium-3 columns">
+          <div class="card">
+            <div class="content">
+                <p class="title">Sump Tank</p>
+                <!-- <div id="sump_temp" class="current-temperature" data-temperature="{{latest_sump_temp.data}}" data-low="0" data-high="50" data-optimal-low="20" data-optimal-high="30">
+                </div> -->
+              <h3 class="text-center">
+                  {{latest_sump_temp.data}}&deg;C
+              </h3>
+            </div>
+            <div class="action">
+                <div class="row">
+                  <a class="" href="{% url 'graph' 'st' %}">
+                    <span class="columns small-3">Graph</span>
+                    <i class="fi-arrow-right columns small-3" aria-hidden="true"></i>
+                  </a>
+                </div>
+            </div>
+          </div>
+      </div>
+      <div class="medium-3 columns">
+        <div class="card">
+            <div class="content">
+                <p class="title">Fish Tank</p>
+                <!-- <div id="fish_temp" class="current-temperature" data-temperature="{{latest_fish_temp.data}}" data-low="0" data-high="50" data-optimal-low="20" data-optimal-high="30">
+                </div> -->
+              <h3 class="text-center">
+                  {{latest_fish_temp.data}}&deg;C
+              </h3>
+            </div>
+            <div class="action">
+                <div class="row">
+                  <a class="" href="{% url 'graph' 'ft' %}">
+                    <span class="columns small-3">Graph</span>
+                    <i class="fi-arrow-right columns small-3" aria-hidden="true"></i>
+                  </a>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="medium-3 columns">
+        <div class="card">
+            <div class="content">
+                <p class="title">Lights</p>
+                <!-- <div id="fish_temp" class="current-temperature" data-temperature="{{latest_fish_temp.data}}" data-low="0" data-high="50" data-optimal-low="20" data-optimal-high="30">
+                </div> -->
+              <h3 class="text-center">
+                  On
+              </h3>
+            </div>
+            <div class="action">
+                <div class="row">
+                  <a class="" href="{% url 'graph' 'lt' %}">
+                    <span class="columns small-3">Graph</span>
+                    <i class="fi-arrow-right columns small-3" aria-hidden="true"></i>
+                  </a>
+                </div>
+            </div>
+        </div>
+      </div>
   </div>
 </div>
 
 <div class="section-quote">
   <div class="row">
-      <p class="quote">I never guess. It is a capital mistake to theorize before one has data. Insensibly one begins to twist facts to suit theories, instead of theories to suit facts.</p>
-    <p class="text-center author">Sir Arthur Conan Doyle</p>
+    <div class="columns small-centered medium-3">
+      <img class="img-circle" src="{% static 'assets/arthur.png'%}">
+    </div>
+    <div class="columns small-centered medium-9">
+        <p class="quote">I never guess. It is a capital mistake to theorize before one has data. Insensibly one begins to twist facts to suit theories, instead of theories to suit facts.</p>
+      <p class="text-center author">Sir Arthur Conan Doyle</p>
+    </div>
   </div>
 </div>
 
-<div class="section-header">
-</div>
-
+<div class="section-content">
   
   <div class="row">
-    <h2 class="columns">Last data entry: {{latest_grow_temp.sub_date}}</h2>
+    <h2 class="columns">How do you collect data?</h2>
   </div>
+
   <div class="row">
-      <div class="medium-4 columns">
-        <div class="card">
-          <div class="content">
-            <p class="title">Grow Temp</p>
-            <div id="grow_temp" class="current-temperature" data-temperature="{{latest_grow_temp.data}}" data-low="0" data-high="50" data-optimal-low="20" data-optimal-high="30">
-            </div>
-          </div>
-          <div class="action">
-            <a href="{% url 'graph' 'gt' %}">More Info</a>
-          </div>
-        </div>
-      </div>
-      <div class="medium-4 columns">
-          <div class="card">
-            <div class="content">
-                <p class="title">Sump Temp</p>
-                <div id="sump_temp" class="current-temperature" data-temperature="{{latest_sump_temp.data}}" data-low="0" data-high="50" data-optimal-low="20" data-optimal-high="30">
-                </div>
-            </div>
-            <div class="action">
-                <a class="" href="{% url 'graph' 'gt' %}">More Info</a>
-            </div>
-          </div>
-      </div>
-      <div class="medium-4 columns">
-        <div class="card">
-            <div class="content">
-                <p class="title">Fish Temp</p>
-                <div id="fish_temp" class="current-temperature" data-temperature="{{latest_fish_temp.data}}" data-low="0" data-high="50" data-optimal-low="20" data-optimal-high="30">
-                </div>
-            </div>
-            <div class="action">
-                <a class="" href="{% url 'graph' 'st' %}">More Info</a>
-            </div>
-        </div>
-      </div>
+    <div class="columns large-5">
+      <img class="img-circle" src="{% static 'assets/rpi.png' %}">
+    </div>
+    <div class="columns large-7">
+      <p>At the heart of the system is a <a href="https://www.raspberrypi.org/">Raspberry Pi</a>. This is a miniature computer that allows you to connect various sensors by using the Linux operating software. The Raspberry Pi reads the data from the sensor and sends that information to the server that is hosting this website.</p>
+
+      <p>If you want to get your Geek on you can see the code on <a href="https://github.com/afieldio/pi-poster">GitHub</a>. It uses both the I<sup>2</sup>C and the OneWire communication protcols to retrieve the necessary data.</p>
+    </div>
   </div>
-
-  
-<div class="row">
-    <div class="medium-4 columns">
-        <div class="card">
-            <div class="content">
-                <span class="title">Lights</span>
-                <div>
-                    <i class="fi-lightbulb light"></i>
-                </div>
-            </div>
-            <div class="action">
-                <a class="" href="{% url 'graph' 'ls' %}">More Info</a>
-            </div>
-        </div>
-    </div>
-    <div class="medium-4 columns">
-        <div class="card">
-            <div class="content">
-                <span class="title">Air Pressure</span>
-                <div>
-                    <i class="fi-lightbulb light"></i>
-                </div>
-            </div>
-            <div class="action">
-                <a class="" href="{% url 'graph' 'ap' %}">More Info</a>
-            </div>
-        </div>
-    </div>
-    <div class="medium-4 columns">
-        <div class="card">
-            <div class="content">
-                <span class="title">Humidity</span>
-                <div>
-                    <i class="fi-lightbulb light"></i>
-                </div>
-            </div>
-            <div class="action">
-                <a class="" href="{% url 'graph' 'ah' %}">More Info</a>
-            </div>
-        </div>
-    </div>
 </div>
-  
-
-
 
 <script src="{% static 'js/temp.js' %}"type="text/javascript"></script>
 <script type="">

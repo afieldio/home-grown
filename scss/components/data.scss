@@ -3,7 +3,7 @@
 }
 
 .section-quote{
-	background: #fcfcfc;
+	background: white;
 	padding: 50px 0px;
 
 	p{
@@ -23,4 +23,15 @@
 		padding-top: 30px;
 	}
 
+}
+
+
+.custom-row-class {
+  @include grid-row();
+
+  .custom-column-class {
+    @include grid-column(12);
+    min-width: 320px;
+    width: 33%;
+  }
 }

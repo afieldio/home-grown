@@ -1,6 +1,7 @@
 footer{
-	height:20vh;
+	height:200px;
 	background: rgba(0,0,0, 0.8);
+	box-shadow: 10px 10px 5px #fff;
 	div{
 		padding: 20px 0px 0px 0px;
 	}
@@ -8,6 +9,13 @@ footer{
 		font-size: 3em;
 		color: #f2f2f2;
 		margin: 0px 10px;
+	}
+	i:hover{
+		color: #0078A0;
+	}
+
+	a{
+		color: #0078A0;
 	}
 
 }

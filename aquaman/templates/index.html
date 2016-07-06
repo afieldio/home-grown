@@ -28,23 +28,11 @@
 		<h2 class="columns">What is Home Grown?</h2>
 	</div>
 	<div class="row">
-		<p class="columns"><strong>Home Grown</strong> is a closed loop Aquaponic System that allows people to grow healthy, nutricious food in an urban environment. It combines modern IoT technologies with century old farming techniques to create a miniture farm without the need for a garden.</p>
+		<p class="columns"><strong>Home Grown</strong> is a company that specialises in creating Aquaponic Systems. Home Grown combines modern IoT technologies with century old farming techniques to create an ecosystem capable of growing food in urban environments.</p>
 
-		<p class="columns">The video below shows a <em>small</em> scale prototype built in my Garden. The aim of this project was to prove that this was technicaly feasible. Some good news - it is! Please get in <a href="{% url 'contact' %}">touch</a> if you want to come visit!</p>
+		<p class="columns">Below is a <em>small</em> scale prototype built by the founder of <strong>Home Grown</strong>. The aim of this prototype was to prove that an Aquaponic system was capable of growing food without the need for fertilisers, soil or even natural light!</p>
 
 		<iframe class="column" width="100%" height="540px" src="https://www.youtube.com/embed/B8XeFcnTWAQ" frameborder="0" allowfullscreen></iframe>
-	</div>
-</div>
-
-<div class="section-quote">
-	<div class="row">
-		<div class="columns large-3">
-			<img class="img-circle" src="{% static 'assets/norbert.png'%}">
-		</div>
-		<div class="columns large-9">
-			<p class="quote">The more we get out of the world the less we leave, and in the long run we shall have to pay our debts at a time that may be very inconvenient for our own survival.</p>
-			<p class="text-center author">Norbert Weiner</p>
-		</div>
 	</div>
 </div>
 
@@ -53,7 +41,7 @@
 		<h2 class="columns">What is Aquaponics?</h2>
 	</div>
 	<div class="row">
-		<p class="columns"><strong>Aquaponics</strong> is a combination of Aquaculture and Hydroponics. Aquaculture is the farming of aquatic organisms and Hydroponics is the growing of plants using mineral nutrient solutions</p>
+		<p class="columns"><strong>Aquaponics</strong> is a farming technique that creates a symbiotic relationship between fish and plant. The name derives from the combination of Aquaculture and Hydroponics. In short, Aquaculture is the farming of aquatic organisms such as fish and Hyrdroponics is the farming of plants using mineral solutions to provide the necessary nutrients. Whilst each of these has their benefits it is the combination of the two processes that make this a truely unique proposition.</p>
 		
 		<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2 aquaponic-info">
 			<li class="text-center">
@@ -78,35 +66,68 @@
 	</div>
 </div>
 
-<div class="section-header">
-	<h2 class="text-center">How does Aquaponics work?</h2>
-</div>
-
 <div class="section-content">
 	<div class="row">
+		<h2 class="columns">How does Aquaponics work?</h2>
+	</div>
+	<div class="row">
 		<div class="columns">
-			<p>Remember Biology GCSE's? Well the process at work is the Nitrogen cycle. It's really quite a simple process but one that has had millenia to be perfected. The joy of Aquaponics is the ability to harness this pefection!
+			<p>To understand how it all works we need to go back to your biology class at school! The process at work within an Aquaponic system is called the Nitrogen cycle. It has been improved over millions of years and the joy of Aquaponics is the ability to harness this pefection!
 				
 			</p>
 		</div>
 		
 	</div>
 	<div class="row">
-		<div class="columns large-4">
-			<ol>
-				<li>The fish create waste from feeding</li>
-				<li>The waste is essentially ammonia</li>
+		<h3 class="columns">Nitrogen Cycle</h3>
+	</div>
+	<div class="row aquaponic-steps">
+		<div class="columns large-6 aquaponic-steps-list">
+			<ol class="">
+				<li>The fish waste creates ammonia</li>
 				<li>Bacteria convert the ammonia into nitrates and nitrites</li>
 				<li>The plants absorb the nitrates out of the system</li>
-				<li>The plants clean the water for the fish</li>
+				<li>Removing the nitrates and nitrites cleans the water for the fish</li>
 			</ol>
 		</div>
-		<div class="columns large-6">
-			<h3 class="text-center">Nitrogen Cycle</h3>
-			<img class="text-center" src="{% static 'assets/nitrogen_a.png' %}">
+		<div class="columns large-6 aquaponic-steps-image">
+			<img class="text-center" src="{% static 'assets/nitrogen_cycle.png' %}">
 		</div>
 	</div>
 	
+</div>
+
+<div class="section-content">
+
+	<div class="row">
+		<h2 class="columns">Why Home Grown?</h2>
+	</div>
+	<div class="row">
+		<p class="columns">We have been working with and researching Aquaponic systems for several years and the benefits of what can be achieved are truely astounding. There is one common underlying theme that makes us a mission led company.</p>
+
+		<p>Produce healthy, nutricous food with the lowest possible impact on the earth.</p>
+
+		<p>Create a sustainable and profitable business that brings work into </p>
+
+
+
+		<p class="columns">Home Grown is about making all of us more self reliant. We have become a nation of importers, from food to clothing the majority of everything we consume is not produce here in the UK.</p>
+
+		<p class="columns">Home Grown is about making all of us more self reliant. We have become a nation of importers, from food to clothing the majority of everything we consume is not produce here in the UK.</p>
+
+	</div>
+</div>
+
+<div class="section-quote">
+	<div class="row">
+		<div class="columns small-centered small-3 medium-3">
+			<img class="img-circle" src="{% static 'assets/norbert.png'%}">
+		</div>
+		<div class="columns small-centered medium-9">
+			<p class="quote">The more we get out of the world the less we leave, and in the long run we shall have to pay our debts at a time that may be very inconvenient for our own survival.</p>
+			<p class="text-center author">Norbert Weiner</p>
+		</div>
+	</div>
 </div>
 
 {% endblock %}
