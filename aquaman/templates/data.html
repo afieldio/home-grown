@@ -32,90 +32,40 @@
 
 <div class="section-content">
   <div class="row">
-    <h2 class="columns">Last data entry: {{latest_grow_temp.sub_date}}</h2>
+    <h2 class="columns">Last data entry: {{sensors.items.0.1.date}}</h2>
   </div>
 
-  <div class="row">
-      <div class="medium-3 columns">
-        <div class="card">
-          <div class="content">
-            <p class="title">Grow Bed</p>
-            <!-- <div id="grow_temp" class="current-temperature" data-temperature="{{latest_grow_temp.data}}" data-low="0" data-high="50" data-optimal-low="20" data-optimal-high="30">
-            </div> -->
-            <h3 class="text-center">
-                {{latest_grow_temp.data}}&deg;C
-            </h3>
-          </div>
-          <div class="action">
-                <div class="row">
-                  <a class="" href="{% url 'graph' 'gt' %}">
-                    <span class="columns small-3">Graph</span>
-                    <i class="fi-arrow-right columns small-3" aria-hidden="true"></i>
-                  </a>
-                </div>
-            </div>
-        </div>
-      </div>
-      <div class="medium-3 columns">
+  <div class="">
+    {% for key, value in sensors.items %}
+      {% if forloop.counter == 1 or forloop.counter == 4 %}<div class="row">{% endif %}
+        <div class="large-3 columns">
           <div class="card">
             <div class="content">
-                <p class="title">Sump Tank</p>
-                <!-- <div id="sump_temp" class="current-temperature" data-temperature="{{latest_sump_temp.data}}" data-low="0" data-high="50" data-optimal-low="20" data-optimal-high="30">
-                </div> -->
+              <p class="title">{{key}}</p>
+              <!-- <div id="grow_temp" class="current-temperature" data-temperature="{{latest_grow_temp.data}}" data-low="0" data-high="50" data-optimal-low="20" data-optimal-high="30">
+              </div> -->
+              {% if key == 'Light' %}
               <h3 class="text-center">
-                  {{latest_sump_temp.data}}&deg;C
+                  {{value.data}}
               </h3>
+              {% else %}
+              <h3 class="text-center">
+                  {{value.data}}&deg;C
+              </h3>
+              {% endif %}
             </div>
-            <div class="action">
-                <div class="row">
-                  <a class="" href="{% url 'graph' 'st' %}">
-                    <span class="columns small-3">Graph</span>
-                    <i class="fi-arrow-right columns small-3" aria-hidden="true"></i>
-                  </a>
-                </div>
-            </div>
+              <div class="action">
+                  <div class="row">
+                    <a class="" href="{% url 'graph' sn=value.name.lower %}">
+                      <span class="columns small-3">Graph</span>
+                      <i class="fi-arrow-right columns small-3" aria-hidden="true"></i>
+                    </a>
+                  </div>
+              </div>
           </div>
-      </div>
-      <div class="medium-3 columns">
-        <div class="card">
-            <div class="content">
-                <p class="title">Fish Tank</p>
-                <!-- <div id="fish_temp" class="current-temperature" data-temperature="{{latest_fish_temp.data}}" data-low="0" data-high="50" data-optimal-low="20" data-optimal-high="30">
-                </div> -->
-              <h3 class="text-center">
-                  {{latest_fish_temp.data}}&deg;C
-              </h3>
-            </div>
-            <div class="action">
-                <div class="row">
-                  <a class="" href="{% url 'graph' 'ft' %}">
-                    <span class="columns small-3">Graph</span>
-                    <i class="fi-arrow-right columns small-3" aria-hidden="true"></i>
-                  </a>
-                </div>
-            </div>
         </div>
-      </div>
-      <div class="medium-3 columns">
-        <div class="card">
-            <div class="content">
-                <p class="title">Lights</p>
-                <!-- <div id="fish_temp" class="current-temperature" data-temperature="{{latest_fish_temp.data}}" data-low="0" data-high="50" data-optimal-low="20" data-optimal-high="30">
-                </div> -->
-              <h3 class="text-center">
-                  On
-              </h3>
-            </div>
-            <div class="action">
-                <div class="row">
-                  <a class="" href="{% url 'graph' 'lt' %}">
-                    <span class="columns small-3">Graph</span>
-                    <i class="fi-arrow-right columns small-3" aria-hidden="true"></i>
-                  </a>
-                </div>
-            </div>
-        </div>
-      </div>
+      {% if forloop.counter == 3 or forloop.counter == 6 %}</div>{% endif %}
+    {% endfor %}
   </div>
 </div>
 

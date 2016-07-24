@@ -31,28 +31,16 @@ def index(request):
     return render(request, 'index.html', context)
 
 def data(request):
-    try:
-        latest_grow_temp = Sensor.objects.filter(
-            sensor_name="GT").latest("sub_date")
-        latest_sump_temp = Sensor.objects.filter(
-        sensor_name="ST").latest("sub_date")
-        latest_fish_temp = Sensor.objects.filter(
-            sensor_name="FT").latest("sub_date")
-        latest_air_temp = Sensor.objects.filter(
-            sensor_name="AT").latest('sub_date')
-        latest_air_pressure = Sensor.objects.filter(
-            sensor_name="AP").latest('sub_date')
-        latest_light_lux = Sensor.objects.filter(
-            sensor_name="LS").order_by('sub_date').reverse()[:2]
-        light = False
-    except Exception, e:
-        latest_grow_temp = "99.99"
-        latest_sump_temp = "99.99"
-        latest_fish_temp = "99.99"
-        latest_air_temp = "99.99"
-        latest_air_pressure = "99.99"
-        latest_light_lux = "99.99"
-        
+    sensor_list = {'GT':'Grow Bed', 'ST':'Sump Tank', 'FT':'Fish Tank', 'AT':'Air Temp', 'AP':'Air Pressure', 'LT':'Light'}
+    sensors = {}
+    for key, value in sensor_list.iteritems():
+        try:
+            s = Sensor.objects.filter(sensor_name=key).latest("sub_date")
+            sensors[value] = {'name':s.sensor_name, 'data':s.data, 'date':s.sub_date}
+        except Exception, e:
+            sensors[value] = {'name':s.sensor_name, 'data':'99.99', 'date':'NA'}
+
+    print sensors
 
     
 
@@ -63,22 +51,19 @@ def data(request):
 
     # print light
 
-    # import ipdb; ipdb.set_trace()
-    # all_fish_temp = Sensor.objects.filter(
-    #     sensor_name="FT").order_by('sub_date')
+    
 
     # import ipdb; ipdb.set_trace()
-    context = {'latest_grow_temp': latest_grow_temp, 'latest_sump_temp':
-               latest_sump_temp, 'latest_fish_temp': latest_fish_temp,'light': light, 'latest_light_lux': latest_light_lux, 'state': 'data' }
+    context = {'state': 'data', 'sensors':sensors }
 
     return render(request, 'data.html', context)
 
 def graph(request, sn):
-    if sn == 'ft':
+    if sn == 'FT':
         sensor_name = 'Fish Tank'
-    elif sn == 'st':
+    elif sn == 'ST':
         sensor_name = 'Sump Tank'
-    elif sn == 'gt':
+    elif sn == 'GT':
         sensor_name = 'Grow Area'
     else:
         sensor_name = 'UNKNOWN'

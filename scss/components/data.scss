@@ -24,14 +24,3 @@
 	}
 
 }
-
-
-.custom-row-class {
-  @include grid-row();
-
-  .custom-column-class {
-    @include grid-column(12);
-    min-width: 320px;
-    width: 33%;
-  }
-}

@@ -6855,23 +6855,6 @@ h2 {
     font-size: 1.3rem;
     padding-top: 30px; }
 
-.custom-row-class {
-  margin: 0 auto;
-  max-width: 62.5rem;
-  width: 100%; }
-  .custom-row-class:before, .custom-row-class:after {
-    content: " ";
-    display: table; }
-  .custom-row-class:after {
-    clear: both; }
-  .custom-row-class .custom-column-class {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    width: 100%;
-    float: left;
-    min-width: 320px;
-    width: 33%; }
-
 footer {
   height: 200px;
   background: rgba(0, 0, 0, 0.8);
