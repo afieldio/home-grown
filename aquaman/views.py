@@ -38,7 +38,7 @@ def data(request):
             s = Sensor.objects.filter(sensor_name=key).latest("sub_date")
             sensors[value] = {'name':s.sensor_name, 'data':s.data, 'date':s.sub_date}
         except Exception, e:
-            sensors[value] = {'name':value, 'data':'99.99', 'date':'NA'}
+            sensors[value] = {'name':key.lower(), 'data':'99.99', 'date':'NA'}
 
     print sensors
 
