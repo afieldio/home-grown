@@ -34,21 +34,27 @@ def data(request):
     try:
         latest_grow_temp = Sensor.objects.filter(
             sensor_name="GT").latest("sub_date")
+        latest_sump_temp = Sensor.objects.filter(
+        sensor_name="ST").latest("sub_date")
+        latest_fish_temp = Sensor.objects.filter(
+            sensor_name="FT").latest("sub_date")
+        latest_air_temp = Sensor.objects.filter(
+            sensor_name="AT").latest('sub_date')
+        latest_air_pressure = Sensor.objects.filter(
+            sensor_name="AP").latest('sub_date')
+        latest_light_lux = Sensor.objects.filter(
+            sensor_name="LS").order_by('sub_date').reverse()[:2]
+        light = False
     except Exception, e:
         latest_grow_temp = "99.99"
+        latest_sump_temp = "99.99"
+        latest_fish_temp = "99.99"
+        latest_air_temp = "99.99"
+        latest_air_pressure = "99.99"
+        latest_light_lux = "99.99"
         raise e
 
-    latest_sump_temp = Sensor.objects.filter(
-        sensor_name="ST").latest("sub_date")
-    latest_fish_temp = Sensor.objects.filter(
-        sensor_name="FT").latest("sub_date")
-    latest_air_temp = Sensor.objects.filter(
-        sensor_name="AT").latest('sub_date')
-    latest_air_pressure = Sensor.objects.filter(
-        sensor_name="AP").latest('sub_date')
-    latest_light_lux = Sensor.objects.filter(
-        sensor_name="LS").order_by('sub_date').reverse()[:2]
-    light = False
+    
 
     if latest_light_lux[0].data < 10 and latest_light_lux[1].data < 10:
         light = False
