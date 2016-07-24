@@ -52,7 +52,7 @@ def data(request):
         latest_air_temp = "99.99"
         latest_air_pressure = "99.99"
         latest_light_lux = "99.99"
-        raise e
+        
 
     
 
