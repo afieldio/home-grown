@@ -31,7 +31,7 @@ def index(request):
     return render(request, 'index.html', context)
 
 def data(request):
-    sensor_list = {'GT':'Grow Bed', 'ST':'Sump Tank', 'FT':'Fish Tank', 'AT':'Air Temp', 'AP':'Air Pressure', 'LT':'Light'}
+    sensor_list = {'GT':'Grow Bed', 'ST':'Sump Tank', 'FT':'Fish Tank', 'AT':'Air Temp', 'AP':'Air Pressure', 'LS':'Light'}
     sensors = {}
     for key, value in sensor_list.iteritems():
         try:
