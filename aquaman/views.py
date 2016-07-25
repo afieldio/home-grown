@@ -26,23 +26,25 @@ from django.http import JsonResponse
 
 
 def index(request):
-    context = {'state':'home'}
-    
+    context = {'state': 'home'}
+
     return render(request, 'index.html', context)
 
+
 def data(request):
-    sensor_list = {'GT':'Grow Bed', 'ST':'Sump Tank', 'FT':'Fish Tank', 'AT':'Air Temp', 'AP':'Air Pressure', 'LS':'Light'}
+    sensor_list = {'GT': 'Grow Bed', 'ST': 'Sump Tank', 'FT': 'Fish Tank',
+                   'AT': 'Air Temp', 'AP': 'Air Pressure', 'LS': 'Light'}
     sensors = {}
     for key, value in sensor_list.iteritems():
         try:
             s = Sensor.objects.filter(sensor_name=key).latest("sub_date")
-            sensors[value] = {'name':s.sensor_name, 'data':s.data, 'date':s.sub_date}
+            sensors[value] = {'name': s.sensor_name,
+                              'data': s.data, 'date': s.sub_date}
         except Exception, e:
-            sensors[value] = {'name':key.lower(), 'data':'99.99', 'date':'NA'}
+            sensors[value] = {
+                'name': key.lower(), 'data': '99.99', 'date': 'NA'}
 
     print sensors
-
-    
 
     # if latest_light_lux[0].data < 10 and latest_light_lux[1].data < 10:
     #     light = False
@@ -51,12 +53,11 @@ def data(request):
 
     # print light
 
-    
-
     # import ipdb; ipdb.set_trace()
-    context = {'state': 'data', 'sensors':sensors }
+    context = {'state': 'data', 'sensors': sensors}
 
     return render(request, 'data.html', context)
+
 
 def graph(request, sn):
     if sn == 'FT':
