@@ -38,13 +38,16 @@ def data(request):
     for key, value in sensor_list.iteritems():
         try:
             s = Sensor.objects.filter(sensor_name=key).latest("sub_date")
+            if key == 'AP':
+                sensor_data = (format(s, '0.1f')/100)
+            else:
+                sensor_data = format(s, '0.1f')
             sensors[value] = {'name': s.sensor_name,
-                              'data': s.data, 'date': s.sub_date}
+                              'data': sensor_data, 'date': s.sub_date}
         except Exception, e:
             sensors[value] = {
                 'name': key.lower(), 'data': '99.99', 'date': 'NA'}
 
-    print sensors
 
     # if latest_light_lux[0].data < 10 and latest_light_lux[1].data < 10:
     #     light = False
