@@ -6855,6 +6855,9 @@ h2 {
     font-size: 1.3rem;
     padding-top: 30px; }
 
+.first-data-row {
+  padding-bottom: 33px; }
+
 footer {
   height: 200px;
   background: rgba(0, 0, 0, 0.8);
