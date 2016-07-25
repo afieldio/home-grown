@@ -45,15 +45,15 @@
               <!-- <div id="grow_temp" class="current-temperature" data-temperature="{{latest_grow_temp.data}}" data-low="0" data-high="50" data-optimal-low="20" data-optimal-high="30">
               </div> -->
               {% if key == 'Light' %}
-              <h3 class="text-center">
+              <h3 class="sensor-value text-center">
                   {{value.data}} Lux
               </h3>
               {% elif key == 'Air Pressure' %}
-              <h3 class="text-center">
+              <h3 class="sensor-value text-center">
                   {{value.data}} hPA
               </h3>
               {% else %}
-              <h3 class="text-center">
+              <h3 class="sensor-value text-center">
                   {{value.data}}&deg;C
               </h3>
               {% endif %}

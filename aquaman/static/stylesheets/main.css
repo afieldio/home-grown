@@ -6883,11 +6883,14 @@ footer {
     line-height: 3rem;
     font-size: 1.5rem;
     font-weight: 300;
-    text-align: center; }
+    text-align: center;
+    padding-bottom: 1rem; }
   .card .content {
     padding: 1.3rem;
     font-weight: 300;
     border-radius: 0 0 2px 2px; }
+    .card .content h3 {
+      font-size: 2rem; }
   .card p {
     margin: 0; }
   .card .action {
