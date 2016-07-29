@@ -96,6 +96,7 @@ def graph_data(request, sn):
 	q = Sensor.objects.filter(sensor_name=sn).order_by(
 		"sub_date").values('data', 'sub_date')
 	all_sensor_data = json.dumps(list(q), cls=DjangoJSONEncoder)
+	# import ipdb; ipdb.set_trace()
 	return JsonResponse(all_sensor_data, safe=False)
 
 

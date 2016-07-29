@@ -30,13 +30,11 @@ $(function () {
 
     $.getJSON("/graph_data/"+sensor, function(data) {
         var graph_data = JSON.parse(data);
-        var data = [];
-        for (var i = graph_data.length - 1; i >= 0; i--) {
-            var temp = graph_data[i]['data'];
-            var date = Date.parse(graph_data[i]['sub_date'])
-            data.push([date, temp]);
-        };
-        
+
+        var data = graph_data.map(function(item){
+            return [Date.parse(item['sub_date']), item['data']]
+        });
+
         $('#graph').highcharts('StockChart',{
             
             title: {
