@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Aquaman | {% block title %}{% endblock %}</title>
   <script src='{% static "jquery/dist/jquery.js" %}'></script>
-  <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <!-- <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
   <script type="text/javascript" src="{% static 'foundation/js/foundation.js' %}"></script>
   <link rel="stylesheet" href="{% static 'stylesheets/main.css' %}">
   <link rel="stylesheet" href="{% static 'stylesheets/foundation-icons.css' %}"
@@ -21,10 +21,6 @@
     {% include 'footer.html' %}
     <script>
       $(document).foundation();
-    </script>
-
-    <script type="">
-      console.log(window.jQuery.fn.jquery);
     </script>
 </body>
 </html>

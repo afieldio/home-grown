@@ -7,7 +7,7 @@ var temp_displays = ["#grow_temp", "#sump_temp", "#fish_temp"];
 for (var i = temp_displays.length - 1; i >= 0; i--) {
 
   var currentTemperatureEl = d3.select(temp_displays[i]);
-  console.log(d3.select('body'));
+  //console.log(d3.select('body'));
 
   var getInt = function (attr) {
     var num = currentTemperatureEl.attr('data-' + attr);
@@ -16,7 +16,7 @@ for (var i = temp_displays.length - 1; i >= 0; i--) {
   };
 
   var temperature = getInt('temperature');
-  console.log(temperature);
+  //console.log(temperature);
   //var temperature = {{st.fish_temp}}
   var low = getInt('low');
   var high = getInt('high');

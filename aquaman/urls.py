@@ -35,6 +35,7 @@ urlpatterns = [
     url(r'^sensorsapi/(?P<pk>[0-9]+)/$', views.DetailSensor.as_view()),
     url(r'^(?P<sn>[a-z]{2})/$', views.graph, name='graph'),
     url(r'^graph_data/(?P<sn>[a-z]{2})/$', views.graph_data, name='data'),
+    url(r'^posttweet/$', views.posttweet, name='posttweet'),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
