@@ -6830,12 +6830,13 @@ h2 {
   margin-bottom: 40px; }
 
 .aquaponic-steps .aquaponic-steps-list {
-  margin: 0px auto;
-  padding-top: 50px; }
+  height: 100%;
+  margin: auto 0px; }
   .aquaponic-steps .aquaponic-steps-list li {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 200;
-    line-height: 2.5rem; }
+    line-height: 5rem;
+    vertical-align: middle; }
 
 .current-temperature {
   width: 100%; }
