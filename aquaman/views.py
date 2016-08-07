@@ -64,15 +64,13 @@ def posttweet(request, tweet_type):
 
     if tweet_type == 'mmd':
         maxMinDayTemp = getMaxMin(1)
-        import ipdb; ipdb.set_trace()
-        message = 'Last 24 hours ~ MAX:{0}°C and MIN:{1}°C'.format(maxMinDayTemp['data__max'], maxMinDayTemp['data__min'])
+        message = 'Air Temperature last 24 hours ~ MAX:{0}°C and MIN:{1}°C'.format(maxMinDayTemp['data__max'], maxMinDayTemp['data__min'])
         api.update_status(status=message)
         return HttpResponse("Max Min Sent")
 
     if tweet_type == 'mmm':
         maxMinDayTemp = getMaxMin(30)
-        import ipdb; ipdb.set_trace()
-        message = 'Last 30 days ~ MAX:{0}°C and MIN:{1}°C'.format(maxMinDayTemp['data__max'], maxMinDayTemp['data__min'])
+        message = 'Air Temperature last 30 days ~ MAX:{0}°C and MIN:{1}°C'.format(maxMinDayTemp['data__max'], maxMinDayTemp['data__min'])
         api.update_status(status=message)
         return HttpResponse("Max Min Sent")
 
