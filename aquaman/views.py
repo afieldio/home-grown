@@ -50,7 +50,6 @@ def getMaxMinDay():
     enddate = datetime.today()
     startdaate = enddate - timedelta(days=1)
     data = Sensor.objects.filter(sensor_name='AT').filter(sub_date__gt=startdaate, sub_date__lt=enddate).aggregate(Max('data'), Min('data'))
-    print data
     return data
 
 def twitter_api():
@@ -65,6 +64,7 @@ def posttweet(request, tweet_type):
 
     if tweet_type == 'mm':
         maxMinDayTemp = getMaxMinDay()
+        import ipdb; ipdb.set_trace()
         message = 'In the last 24 hours the air temp was ~MAX:{0}°C and  MIN:{1}°C'.format(maxMinDayTemp['data__max'], maxMinDayTemp['data__min'])
         api.update_status(status=message)
         return HttpResponse("Max Min Sent")
@@ -94,6 +94,7 @@ def posttweet(request, tweet_type):
                 print "Failed to delete:", status.id
         return HttpResponse('Tweets Deleted')
 
+    return HttpResponse("Nothing")
     
 
 def data(request):
