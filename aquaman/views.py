@@ -33,6 +33,7 @@ import urllib
 from datetime import datetime
 from datetime import timedelta
 from django.db.models import Avg, Max, Min
+from auth import *
 
 
 
@@ -48,7 +49,7 @@ def index(request):
 def getMaxMinDay():
     enddate = datetime.today()
     startdaate = enddate - timedelta(days=1)
-    data = Sensor.objects.filter(sub_date__gt=startdaate, sub_date__lt=enddate).aggregate(Max('data'), Min('data'))
+    data = Sensor.objects.filter(sensor_name='AT').filter(sub_date__gt=startdaate, sub_date__lt=enddate).aggregate(Max('data'), Min('data'))
     print data
     return data
 
@@ -58,12 +59,13 @@ def twitter_api():
     api = tweepy.API(auth)
     return api
 
+@logged_in_or_basicauth()
 def posttweet(request, tweet_type):
     api = twitter_api()
 
     if tweet_type == 'mm':
         maxMinDayTemp = getMaxMinDay()
-        message = 'In the last 24 hours the max temp was {0}°C and the min temp was {1}°C'.format(maxMinDayTemp['data__max'], maxMinDayTemp['data__min'])
+        message = 'In the last 24 hours the air temp was ~MAX:{0}°C and  MIN:{1}°C'.format(maxMinDayTemp['data__max'], maxMinDayTemp['data__min'])
         api.update_status(status=message)
         return HttpResponse("Max Min Sent")
 

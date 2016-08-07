@@ -19,6 +19,7 @@ from django.conf.urls import url
 from rest_framework.urlpatterns import format_suffix_patterns
 from . import views
 from django.conf.urls import include
+from django.contrib.auth import views as auth_views
 
 
 
@@ -36,6 +37,7 @@ urlpatterns = [
     url(r'^(?P<sn>[a-z]{2})/$', views.graph, name='graph'),
     url(r'^graph_data/(?P<sn>[a-z]{2})/$', views.graph_data, name='data'),
     url(r'^posttweet/(?P<tweet_type>[a-z]+)$', views.posttweet, name='posttweet'),
+    url(r'^accounts/login/$', auth_views.login),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
