@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 from django.shortcuts import render, render_to_response
 from django.http import HttpResponse
 from rest_framework.response import Response
@@ -28,6 +30,10 @@ import requests
 import os
 
 import urllib
+from datetime import datetime
+from datetime import timedelta
+from django.db.models import Avg, Max, Min
+
 
 
 
@@ -39,28 +45,54 @@ def index(request):
 
     return render(request, 'index.html', context)
 
-def posttweet(request):
+def getMaxMinDay():
+    enddate = datetime.today()
+    startdaate = enddate - timedelta(days=1)
+    data = Sensor.objects.filter(sub_date__gt=startdaate, sub_date__lt=enddate).aggregate(Max('data'), Min('data'))
+    print data
+    return data
+
+def twitter_api():
     auth = tweepy.OAuthHandler(settings.CONSUMER_KEY, settings.CONSUMER_SECRET)
     auth.set_access_token(settings.ACCESS_KEY, settings.ACCESS_SECRET)
     api = tweepy.API(auth)
-    air_temp = Sensor.objects.filter(sensor_name='AT').latest('sub_date')
-    at = "{0:.2f}".format(air_temp.data)
-    date = air_temp.sub_date.strftime("%Y-%m-%d %H:%M")
-    filename = 'temp.jpg'
-    request = requests.get("http://www.aquaman.no-ip.co.uk/static/image.jpg",stream=True)
-    message = 'At {0} the Air Temperature was: {1}'.format(date, at)
-    if request.status_code == 200:
-        with open(filename, 'wb') as image:
-            for chunk in request:
-                image.write(chunk)
+    return api
 
-        api.update_with_media(filename, status=message)
-        os.remove(filename)
-    else:
-        return HttpResponse("Tweet Failed")
+def posttweet(request, tweet_type):
+    api = twitter_api()
 
-    # import ipdb; ipdb.set_trace()
-    return HttpResponse("Tweet Sent")
+    if tweet_type == 'mm':
+        maxMinDayTemp = getMaxMinDay()
+        message = 'In the last 24 hours the max temp was {0}°C and the min temp was {1}°C'.format(maxMinDayTemp['data__max'], maxMinDayTemp['data__min'])
+        api.update_status(status=message)
+        return HttpResponse("Max Min Sent")
+
+    if tweet_type == 'pic':
+        filename = 'temp.jpg'
+        request = requests.get("http://www.aquaman.no-ip.co.uk/static/image.jpg",stream=True)
+        message = 'Check out the Fish Tank'
+        if request.status_code == 200:
+            with open(filename, 'wb') as image:
+                for chunk in request:
+                    image.write(chunk)
+
+            api.update_with_media(filename, status=message)
+            os.remove(filename)
+            return HttpResponse("Image Sent")
+        else:
+            return HttpResponse("Tweet Failed")
+
+
+    if tweet_type == 'delete':
+        for status in tweepy.Cursor(api.user_timeline).items():
+            try:
+                api.destroy_status(status.id)
+                print "Deleted:", status.id
+            except:
+                print "Failed to delete:", status.id
+        return HttpResponse('Tweets Deleted')
+
+    
 
 def data(request):
     sensor_list = {'GT': 'Grow Bed', 'ST': 'Sump Tank', 'FT': 'Fish Tank',
